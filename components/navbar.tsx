@@ -9,6 +9,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const CVLink = 'https://drive.google.com/uc?export=download&id=1jrtiNN78qdznxLWaQF54KtweLRIYAY1G'
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -71,7 +73,7 @@ const Navbar = () => {
             Contact
           </a>
           <Button asChild className="bg-hero-gradient hover:opacity-90 rounded-xl shadow-md">
-            <Link href="/resume.pdf" download>
+            <Link href={CVLink} download>
               <Download className="h-4 w-4" />
               Download CV
             </Link>
@@ -110,7 +112,7 @@ const Navbar = () => {
               Contact
             </a>
             <Button asChild className="bg-hero-gradient hover:opacity-90 rounded-xl shadow-md w-full mt-2">
-              <Link href="/resume.pdf" download>
+              <Link href={CVLink} download>
                 <Download className="h-4 w-4" />
                 Download CV
               </Link>
