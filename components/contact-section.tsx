@@ -1,7 +1,14 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -38,18 +45,33 @@ const ContactSection = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
-    // This is where you would integrate with Resend or another email service
-    console.log(values)
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+      const data = await response.json()
 
-    setIsSubmitting(false)
-    form.reset()
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message")
+      }
 
-    toast.success("Message sent!", {
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    })
+      form.reset()
+      toast.success("Message sent!", {
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      })
+    } catch (error) {
+      console.error("Error:", error)
+      toast.error("Failed to send message", {
+        description: "Please try again later.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -72,7 +94,10 @@ const ContactSection = () => {
 
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"
@@ -94,7 +119,11 @@ const ContactSection = () => {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your email" type="email" {...field} />
+                        <Input
+                          placeholder="Your email"
+                          type="email"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -108,7 +137,11 @@ const ContactSection = () => {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Your message" className="min-h-32" {...field} />
+                        <Textarea
+                          placeholder="Your message"
+                          className="min-h-32"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -132,4 +165,3 @@ const ContactSection = () => {
 }
 
 export default ContactSection
-
