@@ -76,7 +76,7 @@ const Navbar = () => {
           </a>
           <Button
             asChild
-            className="bg-hero-gradient hover:opacity-90 rounded-xl shadow-md"
+            className="bg-cv-gradient hover:opacity-90 rounded-xl shadow-md"
           >
             <Link href={CVLink} download>
               <Download className="h-4 w-4" />
@@ -124,7 +124,7 @@ const Navbar = () => {
             </a>
             <Button
               asChild
-              className="bg-hero-gradient hover:opacity-90 rounded-xl shadow-md w-full mt-2"
+              className="bg-cv-gradient hover:opacity-90 rounded-xl shadow-md w-full mt-2"
             >
               <Link href={CVLink} download>
                 <Download className="h-4 w-4" />

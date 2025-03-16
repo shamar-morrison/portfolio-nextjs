@@ -88,6 +88,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "hero-gradient": "linear-gradient(to right, #f92c8b 0, #b02cd6 100%)",
+        "cv-gradient": "linear-gradient(to right, #ffbd84 0, #ff1f8e 100%)",
       },
     },
   },
