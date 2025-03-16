@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Code, ExternalLink, Github } from "lucide-react"
+import { Code, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 export interface ProjectProps {

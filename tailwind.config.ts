@@ -87,7 +87,7 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(to right, #ff3870, #f92c8b, #b02cd6, #c300c3)",
+        "hero-gradient": "linear-gradient(to right, #f92c8b 0, #b02cd6 100%)",
       },
     },
   },
@@ -95,4 +95,3 @@ const config: Config = {
 }
 
 export default config
-

@@ -6,13 +6,9 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">
-          <Link href="/" className="text-2xl font-bold gradient-text mb-6">
-            Shamar
-          </Link>
-
           <div className="flex space-x-6 mb-8">
             <Link
-              href="https://twitter.com/yourusername"
+              href="https://x.com/horizonscode"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-pink transition-colors"
@@ -21,7 +17,7 @@ const Footer = () => {
               <Twitter size={24} />
             </Link>
             <Link
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/shamar-morrison-57125220b/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-pink transition-colors"
@@ -30,7 +26,7 @@ const Footer = () => {
               <Linkedin size={24} />
             </Link>
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/shamar-morrison"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-pink transition-colors"
@@ -42,7 +38,9 @@ const Footer = () => {
 
           <div className="text-center text-gray-400">
             <p className="mb-2">Full-Stack Web & Mobile Developer</p>
-            <p>&copy; {new Date().getFullYear()} Shamar. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Shamar. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
@@ -51,4 +49,3 @@ const Footer = () => {
 }
 
 export default Footer
-

@@ -3,12 +3,14 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import Link from "next/link"
-// Import the necessary icons
 import { Code, Send } from "lucide-react"
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 pb-20 px-4 bg-gradient-to-br from-white to-portfolio-peach/30 dark:from-gray-900 dark:to-gray-800">
+    <section
+      id={"home"}
+      className="min-h-screen flex items-center justify-center pt-16 pb-20 px-4 bg-gradient-to-br from-white to-portfolio-peach/30 dark:from-gray-900 dark:to-gray-800"
+    >
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +25,8 @@ const HeroSection = () => {
             Full-Stack Web & Mobile Developer
           </h2>
           <p className="text-lg md:text-xl mb-10 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I build modern, responsive, and user-friendly applications with cutting-edge technologies.
+            I build modern, responsive, and user-friendly applications with
+            cutting-edge technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -55,4 +58,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-
