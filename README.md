@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shamar's Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This portfolio website showcases my skills, projects, and provides a way for potential clients and employers to contact me. The website includes:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- A modern, responsive design
+- Dark/light mode support
+- Smooth navigation
+- Project showcase section
+- Contact form with email functionality
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: Next.js 14 (App Router), React, TypeScript, Tailwind CSS, Shadcn UI
+- **Email**: Resend API for contact form emails
+- **Styling**: Tailwind CSS, CSS Modules
+- **Deployment**: Netlify
 
-## Learn More
+## Setup Instructions
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js 18.17.0 or later
+- npm, yarn, or pnpm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/yourusername/portfolio-nextjs.git
+   cd portfolio-nextjs
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following variables:
+
+   ```
+   RESEND_API_KEY=your_resend_api_key_here
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Important Configuration
+
+### Email Functionality
+
+The contact form uses [Resend](https://resend.com) to send emails. To get this working:
+
+1. Login to your account on [Resend](https://resend.com)
+2. Generate/Copy an API key
+3. Add the API key to your `.env.local` file
+
+## Troubleshooting
+
+### Email Not Sending
+
+If emails aren't being received:
+
+1. Check that your Resend API key is correct
+2. Verify your domain is properly set up in Resend
+3. Check that the "from" email uses your verified domain
+4. Look at the logs in the Resend dashboard
+5. Check spam folders
