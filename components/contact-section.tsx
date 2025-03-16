@@ -12,7 +12,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { motion } from "framer-motion"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
@@ -77,13 +76,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
-        >
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-8 text-center">
             Get In <span className="gradient-text">Touch</span>
           </h2>
@@ -158,7 +151,7 @@ const ContactSection = () => {
               </form>
             </Form>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
