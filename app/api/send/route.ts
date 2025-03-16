@@ -15,9 +15,9 @@ export async function POST(request: Request) {
     }
 
     const data = await resend.emails.send({
-      from: "https://shamar.dev",
+      from: "Portfolio Contact Form <contact@shamar.dev>",
       to: "shamar.webdev@gmail.com",
-      subject: `New BingeBox Contact Form Submission from ${name}`,
+      subject: `New Contact Form Submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       replyTo: email,
     })
