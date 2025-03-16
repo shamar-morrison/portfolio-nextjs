@@ -1,45 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import ProjectCard, { type ProjectProps } from "./project-card"
-
-// Sample projects data - replace with your actual projects
-const projects: ProjectProps[] = [
-  {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with product listings, cart functionality, user authentication, and payment processing.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
-    repoUrl: "https://github.com/username/ecommerce-platform",
-    liveUrl: "https://ecommerce-platform.vercel.app",
-    imageUrl: "/placeholder.svg?height=200&width=400&text=E-Commerce",
-  },
-  {
-    title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates, task assignments, and progress tracking.",
-    technologies: ["React", "Node.js", "Express", "Socket.io", "PostgreSQL"],
-    repoUrl: "https://github.com/username/task-management",
-    liveUrl: "https://task-management-app.vercel.app",
-    imageUrl: "/placeholder.svg?height=200&width=400&text=Task+Management",
-  },
-  {
-    title: "Fitness Tracker",
-    description: "A mobile application for tracking workouts, nutrition, and fitness progress with data visualization.",
-    technologies: ["React Native", "TypeScript", "Firebase", "Chart.js"],
-    repoUrl: "https://github.com/username/fitness-tracker",
-    liveUrl: "https://fitness-tracker-demo.vercel.app",
-    imageUrl: "/placeholder.svg?height=200&width=400&text=Fitness+Tracker",
-  },
-  {
-    title: "Weather Dashboard",
-    description: "A weather dashboard that displays current weather conditions and forecasts for multiple locations.",
-    technologies: ["React", "Redux", "OpenWeather API", "Tailwind CSS"],
-    repoUrl: "https://github.com/username/weather-dashboard",
-    liveUrl: "https://weather-dashboard-demo.vercel.app",
-    imageUrl: "/placeholder.svg?height=200&width=400&text=Weather+Dashboard",
-  },
-]
+import ProjectCard from "./project-card"
+import { projects } from "@/lib/projects"
 
 const ProjectsSection = () => {
   return (
@@ -57,8 +20,8 @@ const ProjectsSection = () => {
           </h2>
 
           <p className="text-lg text-center text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-            Here are some of the projects I've worked on. Each project represents different skills and technologies I've
-            mastered.
+            Here are some of the projects I've worked on. Each project
+            represents different skills and technologies I've mastered.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -81,4 +44,3 @@ const ProjectsSection = () => {
 }
 
 export default ProjectsSection
-

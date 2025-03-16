@@ -1,7 +1,14 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
+import { Code, ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 
 export interface ProjectProps {
@@ -10,7 +17,7 @@ export interface ProjectProps {
   technologies: string[]
   repoUrl: string
   liveUrl: string
-  imageUrl?: string
+  imageUrl: string
 }
 
 const ProjectCard = ({
@@ -19,16 +26,20 @@ const ProjectCard = ({
   technologies,
   repoUrl,
   liveUrl,
-  imageUrl = "/placeholder.svg?height=200&width=400",
+  imageUrl,
 }: ProjectProps) => {
   return (
     <Card className="overflow-hidden border border-gray-200 dark:border-gray-800 h-full flex flex-col transition-all duration-300 hover:shadow-lg">
       <div className="h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <img src={imageUrl || "/placeholder.svg"} alt={title} className="w-full h-full object-cover object-center" />
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-full object-cover object-center"
+        />
       </div>
       <CardHeader>
-        <CardTitle className="text-xl font-bold">{title}</CardTitle>
-        <div className="flex flex-wrap gap-1 mt-2">
+        <CardTitle className="text-xl font-bold mb-2">{title}</CardTitle>
+        <div className="flex flex-wrap gap-1">
           {technologies.map((tech, index) => (
             <Badge
               key={index}
@@ -41,16 +52,21 @@ const ProjectCard = ({
         </div>
       </CardHeader>
       <CardContent className="flex-grow">
-        <CardDescription className="text-gray-600 dark:text-gray-400">{description}</CardDescription>
+        <CardDescription className="text-gray-600 dark:text-gray-400">
+          {description}
+        </CardDescription>
       </CardContent>
       <CardFooter className="flex justify-between gap-2">
         <Button asChild variant="outline" className="flex-1 rounded-xl">
           <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
-            <Github className="h-4 w-4" />
+            <Code className="h-4 w-4" />
             Code
           </Link>
         </Button>
-        <Button asChild className="bg-hero-gradient hover:opacity-90 flex-1 rounded-xl">
+        <Button
+          asChild
+          className="bg-hero-gradient hover:opacity-90 flex-1 rounded-xl"
+        >
           <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="h-4 w-4" />
             Live Demo
@@ -62,4 +78,3 @@ const ProjectCard = ({
 }
 
 export default ProjectCard
-
