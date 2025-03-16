@@ -10,14 +10,14 @@ const technologies = [
   "JavaScript",
   "Node.js",
   "Express",
-  "MongoDB",
+  "Tanstack Query",
   "PostgreSQL",
   "GraphQL",
   "REST API",
   "React Native",
   "Tailwind CSS",
   "HTML5",
-  "CSS3",
+  "Zustand",
   "Git",
   "GitHub",
   "Docker",
@@ -53,7 +53,7 @@ const AboutSection = () => {
 
             <p className="text-lg">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
-              sharing my knowledge through technical articles and mentoring.
+              sharing my knowledge through mentoring.
             </p>
           </div>
 
