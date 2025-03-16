@@ -19,14 +19,14 @@ const HeroSection = () => {
           className="text-center max-w-3xl mx-auto"
         >
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4">
-            Hi, I&apos;m <span className="gradient-text">Shamar</span>
+            Hey, I&apos;m <span className="gradient-text">Shamar</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8 text-gray-700 dark:text-gray-300">
             Full-Stack Web & Mobile Developer
           </h2>
           <p className="text-lg md:text-xl mb-10 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I build modern, responsive, and user-friendly applications with
-            cutting-edge technologies.
+            I build modern, responsive, and user-friendly applications using
+            various technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
