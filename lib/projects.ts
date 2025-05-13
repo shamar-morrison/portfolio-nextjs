@@ -7,7 +7,7 @@ export const projects: ProjectProps[] = [
       "A full-featured streaming platform with HD streaming for Movies, TV Shows and Anime. The ultimate destination for binge watchers.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Rest API"],
     repoUrl: "https://github.com/shamar-morrison/bingebox",
-    liveUrl: "https://bingebox-one.netlify.app",
+    liveUrl: "https://bingebox-bay.vercel.app",
     imageUrl: "/bingebox.png",
   },
   {

@@ -17,7 +17,7 @@ const Footer = () => {
               <Twitter size={24} />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/shamar-morrison-57125220b/"
+              href="https://www.linkedin.com/in/shamar-morrison-7b641b364"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-pink transition-colors"
