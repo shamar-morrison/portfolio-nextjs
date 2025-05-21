@@ -26,21 +26,18 @@ export const projects: ProjectProps[] = [
     imageUrl: "/storeit.png",
   },
   {
-    title: "Sekiro - Workout Tracker",
+    title: "FitTrackr - Workout Tracker",
     description:
-      "A web application for tracking running workouts and cycling with Google Maps.",
-    technologies: ["HTML", "JavaScript", "Leaflet API", "Google Maps API"],
-    repoUrl: "https://github.com/shamar-morrison/sekiro-app",
-    liveUrl: "https://sekiro-intro.netlify.app/",
-    imageUrl: "/sekiro.png",
+      "A web application for tracking workouts and includes metrics, analytics, statistics, and more.",
+    technologies: [
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Next.js",
+      "Tailwind CSS",
+    ],
+    repoUrl: "https://github.com/shamar-morrison/fitness-tracker",
+    liveUrl: "https://v0-fittrackr-project-requirements.vercel.app",
+    imageUrl: "/fittrackr.png",
   },
-  // {
-  //   title: "Ichiraku - Create & Search For Recipes",
-  //   description:
-  //     "A weather dashboard that displays current weather conditions and forecasts for multiple locations.",
-  //   technologies: ["React", "Redux", "OpenWeather API", "Tailwind CSS"],
-  //   repoUrl: "https://github.com/username/weather-dashboard",
-  //   liveUrl: "https://weather-dashboard-demo.vercel.app",
-  //   imageUrl: "/ichiraku.png",
-  // },
 ]
