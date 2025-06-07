@@ -24,6 +24,17 @@ const ProjectsSection = () => {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="https://github.com/shamar-morrison?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-transparent border text-sm border-gray-800 text-gray-800 font-bold py-2 px-6 rounded-full hover:bg-gray-800 hover:text-white dark:border-gray-100 dark:text-gray-100 dark:hover:bg-gray-100 dark:hover:text-gray-900 transition-colors"
+            >
+              View More on GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>
