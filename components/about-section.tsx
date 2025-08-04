@@ -41,9 +41,9 @@ const AboutSection = () => {
             </p>
 
             <p className="text-lg">
-              My journey in software development began over 5 years ago, and
-              since then, I've worked on various projects ranging from
-              e-commerce platforms to complex enterprise applications. I'm
+              My journey in professional software development began in January
+              of 2020, and since then, I've worked on various projects ranging
+              from e-commerce platforms to complex enterprise applications. I'm
               constantly learning and adapting to new technologies to stay at
               the forefront of web development.
             </p>
