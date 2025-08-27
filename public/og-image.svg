@@ -1,0 +1,55 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed7aa;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316" />
+      <stop offset="100%" style="stop-color:#ea580c" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="50" fill="#f97316" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="80" fill="#f97316" opacity="0.1"/>
+  <rect x="1000" y="50" width="100" height="100" fill="#f97316" opacity="0.1" rx="20"/>
+  
+  <!-- Main content -->
+  <g font-family="Inter, system-ui, sans-serif">
+    <!-- Name -->
+    <text x="600" y="200" text-anchor="middle" font-size="72" font-weight="900" fill="#1f2937">
+      Shamar
+    </text>
+    
+    <!-- Title with gradient -->
+    <text x="600" y="280" text-anchor="middle" font-size="48" font-weight="600" fill="url(#text)">
+      Full-Stack Developer
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="600" y="340" text-anchor="middle" font-size="32" font-weight="400" fill="#6b7280">
+      Web & Mobile Applications
+    </text>
+    
+    <!-- Description -->
+    <text x="600" y="420" text-anchor="middle" font-size="24" font-weight="400" fill="#9ca3af" max-width="800">
+      Building modern, responsive, and user-friendly applications
+    </text>
+    
+    <!-- Portfolio text -->
+    <text x="600" y="520" text-anchor="middle" font-size="28" font-weight="600" fill="#f97316">
+      Portfolio
+    </text>
+  </g>
+  
+  <!-- Code symbols -->
+  <g fill="#f97316" opacity="0.8">
+    <path d="M150 450 L200 500 L150 550 M250 450 L300 500 L250 550" stroke="#f97316" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1050 450 L1000 500 L1050 550 M950 450 L900 500 L950 550" stroke="#f97316" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
