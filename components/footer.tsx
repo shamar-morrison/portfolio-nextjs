@@ -1,5 +1,5 @@
-import Link from "next/link"
 import { Github, Linkedin, Twitter } from "lucide-react"
+import Link from "next/link"
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center">
           <div className="flex space-x-6 mb-8">
             <Link
-              href="https://x.com/horizonscode"
+              href="https://x.com/TheAvgCoder"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-pink transition-colors"
