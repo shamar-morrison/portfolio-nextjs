@@ -32,14 +32,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shamar.dev", // Replace with your actual domain
+    url: "https://shamar.dev",
     siteName: "Shamar Portfolio",
     title: "Shamar | Full-Stack Web & Mobile Developer",
     description:
       "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
     images: [
       {
-        url: "/og-image.svg", // We'll create this image
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "Shamar - Full-Stack Developer Portfolio",
@@ -51,12 +51,12 @@ export const metadata: Metadata = {
     title: "Shamar | Full-Stack Web & Mobile Developer",
     description:
       "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications.",
-    images: ["/og-image.svg"], // Same image for Twitter
-    creator: "@theavgcoder", // Replace with your Twitter handle
-    site: "@theavgcoder", // Replace with your Twitter handle
+    images: ["/og-image.svg"],
+    creator: "@theavgcoder",
+    site: "@theavgcoder",
   },
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#f92c8b", // Your primary color
+  themeColor: "#f92c8b",
   manifest: "/site.webmanifest",
   icons: {
     icon: "/favicon.ico",
@@ -94,11 +94,11 @@ export default function RootLayout({
               jobTitle: "Full-Stack Web & Mobile Developer",
               description:
                 "Full-Stack Developer specializing in modern, responsive applications",
-              url: "https://shamar.dev", // Replace with your actual domain
+              url: "https://shamar.dev",
               sameAs: [
-                "https://github.com/shamar-morrison", // Replace with your GitHub
-                "https://www.linkedin.com/in/shamar-morrison-7b641b364/", // Replace with your LinkedIn
-                "https://twitter.com/theavgcoder", // Replace with your Twitter
+                "https://github.com/shamar-morrison",
+                "https://www.linkedin.com/in/shamar-morrison-7b641b364/",
+                "https://twitter.com/theavgcoder",
               ],
               knowsAbout: [
                 "Web Development",
