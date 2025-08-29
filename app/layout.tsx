@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import type React from "react"
 import { Toaster } from "sonner"
@@ -56,8 +56,6 @@ export const metadata: Metadata = {
     creator: "@theavgcoder",
     site: "@theavgcoder",
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#f92c8b",
   manifest: "/site.webmanifest",
   icons: {
     icon: "/favicon.ico",
@@ -74,6 +72,12 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#f92c8b",
     "msapplication-tap-highlight": "no",
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#f92c8b",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
