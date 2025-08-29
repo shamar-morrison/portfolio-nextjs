@@ -13,6 +13,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shamar.dev"),
   title: "Shamar | Full-Stack Web & Mobile Developer",
   description:
     "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
@@ -39,10 +40,10 @@ export const metadata: Metadata = {
       "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Shamar - Full-Stack Developer Portfolio",
+        alt: "Shamar — Full-Stack Web & Mobile Developer",
       },
     ],
   },
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     title: "Shamar | Full-Stack Web & Mobile Developer",
     description:
       "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications.",
-    images: ["/og-image.svg"],
+    images: ["/meta-image.png"],
     creator: "@theavgcoder",
     site: "@theavgcoder",
   },
@@ -62,6 +63,17 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  other: {
+    "application-name": "Shamar Portfolio",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Shamar Portfolio",
+    "format-detection": "telephone=no",
+    "mobile-web-app-capable": "yes",
+    "msapplication-config": "/browserconfig.xml",
+    "msapplication-TileColor": "#f92c8b",
+    "msapplication-tap-highlight": "no",
+  },
 }
 
 export default function RootLayout({
@@ -71,19 +83,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
-      <head>
-        {/* Additional meta tags for better social sharing */}
-        <meta name="application-name" content="Shamar Portfolio" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Shamar Portfolio" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content="#f92c8b" />
-        <meta name="msapplication-tap-highlight" content="no" />
-
-        {/* Structured Data for better SEO */}
+      <body className="font-sans antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,8 +110,6 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
-      <body className="font-sans antialiased">
         {children}
         <Toaster />
       </body>
