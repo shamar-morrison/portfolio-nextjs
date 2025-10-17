@@ -26,18 +26,12 @@ export const projects: ProjectProps[] = [
     imageUrl: "/storeit.png",
   },
   {
-    title: "FitTrackr - Workout Tracker",
+    title: "Suburbia Skates - Online Shop",
     description:
-      "A web application for tracking workouts and includes metrics, analytics, statistics, and more.",
-    technologies: [
-      "TypeScript",
-      "Supabase",
-      "PostgreSQL",
-      "Next.js",
-      "Tailwind CSS",
-    ],
-    repoUrl: "https://github.com/shamar-morrison/fitness-tracker",
-    liveUrl: "https://v0-fittrackr-project-requirements.vercel.app",
-    imageUrl: "/fittrackr.png",
+      "A modern online store which features rich 3D animations, particle effects, and an interactive skateboard customizer.",
+    technologies: ["TypeScript", "GSAP", "Matter.js", "Three.js", "CMS"],
+    repoUrl: "https://github.com/shamar-morrison/suburbia-skate",
+    liveUrl: "https://suburbia-skates-hxh.netlify.app/",
+    imageUrl: "/skate.png",
   },
 ]
