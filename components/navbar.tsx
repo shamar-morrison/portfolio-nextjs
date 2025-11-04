@@ -9,10 +9,10 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const CVLink =
-    "https://drive.google.com/uc?export=download&id=1jrtiNN78qdznxLWaQF54KtweLRIYAY1G"
+  const RESUME_ID = "1ftaZjEZu2Ke9g9t2uq-hisBHJJBhtlrH" // Google Drive File ID
+  const CVLink = `https://drive.google.com/uc?export=download&id=${RESUME_ID}`
 
-  useEffect(() => {
+  https: useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true)
