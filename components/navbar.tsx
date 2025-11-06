@@ -78,9 +78,9 @@ const Navbar = () => {
             asChild
             className="bg-cv-gradient hover:opacity-90 rounded-xl shadow-md"
           >
-            <Link href={CVLink} download>
-              <Download className="h-4 w-4" />
-              Download CV
+            <Link href={CVLink} download className="group">
+              <Download className="h-4 w-4 group-hover:animate-bounce" />
+              Resume
             </Link>
           </Button>
         </nav>
@@ -128,7 +128,7 @@ const Navbar = () => {
             >
               <Link href={CVLink} download>
                 <Download className="h-4 w-4" />
-                Download CV
+                Resume
               </Link>
             </Button>
           </nav>
