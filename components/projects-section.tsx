@@ -4,11 +4,10 @@ import { projects } from "@/lib/projects"
 import ProjectCard from "./project-card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 
-type Category = "Fullstack" | "Backend APIs" | "Frontend"
+const categories = ["Full Stack", "Backend APIs"] as const
+export type Category = (typeof categories)[number]
 
 const ProjectsSection = () => {
-  const categories: Category[] = ["Fullstack", "Backend APIs", "Frontend"]
-
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
@@ -22,7 +21,7 @@ const ProjectsSection = () => {
             represents different skills and technologies I've mastered.
           </p>
 
-          <Tabs defaultValue="Fullstack" className="w-full">
+          <Tabs defaultValue={categories[0]} className="mb-12">
             <div className="flex justify-center mb-12">
               <TabsList className="bg-gray-100 dark:bg-gray-900 p-1 rounded-full h-auto">
                 {categories.map((category) => (
@@ -39,7 +38,7 @@ const ProjectsSection = () => {
 
             {categories.map((category) => {
               const filteredProjects = projects.filter(
-                (project) => project.category === category
+                (project) => project.category === category,
               )
 
               return (

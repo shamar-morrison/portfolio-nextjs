@@ -9,7 +9,7 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/bingebox",
     liveUrl: "https://bingebox-bay.vercel.app",
     imageUrl: "/bingebox.png",
-    category: "Fullstack",
+    category: "Full Stack",
   },
   {
     title: "Storage and File Sharing Platform",
@@ -25,16 +25,40 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/storage-management",
     liveUrl: "https://storage-management-nu.vercel.app",
     imageUrl: "/storeit.png",
-    category: "Fullstack",
+    category: "Full Stack",
   },
   {
     title: "Suburbia Skates - Online Shop",
     description:
       "A modern online store which features rich 3D animations, particle effects, and an interactive skateboard customizer.",
-    technologies: ["TypeScript", "GSAP", "Matter.js", "Three.js", "CMS"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "GSAP",
+      "Matter.js",
+      "Three.js",
+      "CMS",
+    ],
     repoUrl: "https://github.com/shamar-morrison/suburbia-skate",
     liveUrl: "https://suburbia-skates-hxh.netlify.app/",
     imageUrl: "/skate.png",
-    category: "Fullstack",
+    category: "Full Stack",
+  },
+  {
+    title: "Music API - Music Streaming Platform",
+    description:
+      "Music API provides a complete backend solution for managing a music streaming platform.",
+    technologies: [
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Swagger",
+      "Cloudinary",
+      "TypeScript",
+    ],
+    repoUrl: "https://github.com/shamar-morrison/music-api",
+    liveUrl: "https://music-api-dnrm.onrender.com",
+    imageUrl: "/music-api.png",
+    category: "Backend APIs",
   },
 ]

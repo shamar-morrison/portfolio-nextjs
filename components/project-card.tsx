@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Code, ExternalLink } from "lucide-react"
 import Link from "next/link"
+import { Category } from "./projects-section"
 
 export interface ProjectProps {
   title: string
@@ -18,7 +19,7 @@ export interface ProjectProps {
   repoUrl: string
   liveUrl: string
   imageUrl: string
-  category: "Fullstack" | "Backend APIs" | "Frontend"
+  category: Category
 }
 
 const ProjectCard = ({
