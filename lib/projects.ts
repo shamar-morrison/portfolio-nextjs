@@ -9,6 +9,7 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/bingebox",
     liveUrl: "https://bingebox-bay.vercel.app",
     imageUrl: "/bingebox.png",
+    category: "Fullstack",
   },
   {
     title: "Storage and File Sharing Platform",
@@ -24,6 +25,7 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/storage-management",
     liveUrl: "https://storage-management-nu.vercel.app",
     imageUrl: "/storeit.png",
+    category: "Fullstack",
   },
   {
     title: "Suburbia Skates - Online Shop",
@@ -33,5 +35,6 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/suburbia-skate",
     liveUrl: "https://suburbia-skates-hxh.netlify.app/",
     imageUrl: "/skate.png",
+    category: "Fullstack",
   },
 ]

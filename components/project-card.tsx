@@ -18,6 +18,7 @@ export interface ProjectProps {
   repoUrl: string
   liveUrl: string
   imageUrl: string
+  category: "Fullstack" | "Backend APIs" | "Frontend"
 }
 
 const ProjectCard = ({
