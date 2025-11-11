@@ -9,7 +9,7 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/bingebox",
     liveUrl: "https://bingebox-bay.vercel.app",
     imageUrl: "/bingebox.png",
-    category: "Full Stack",
+    categories: ["Full Stack"],
   },
   {
     title: "Storage and File Sharing Platform",
@@ -25,7 +25,7 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/storage-management",
     liveUrl: "https://storage-management-nu.vercel.app",
     imageUrl: "/storeit.png",
-    category: "Full Stack",
+    categories: ["Full Stack"],
   },
   {
     title: "Suburbia Skates - Online Shop",
@@ -42,7 +42,7 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/suburbia-skate",
     liveUrl: "https://suburbia-skates-hxh.netlify.app/",
     imageUrl: "/skate.png",
-    category: "Full Stack",
+    categories: ["Full Stack"],
   },
   {
     title: "Music API - Music Streaming Platform",
@@ -59,6 +59,6 @@ export const projects: ProjectProps[] = [
     repoUrl: "https://github.com/shamar-morrison/music-api",
     liveUrl: "https://music-api-dnrm.onrender.com",
     imageUrl: "/music-api.png",
-    category: "Backend APIs",
+    categories: ["Backend APIs"],
   },
 ]

@@ -19,7 +19,7 @@ export interface ProjectProps {
   repoUrl: string
   liveUrl: string
   imageUrl: string
-  category: Category
+  categories: Category[]
 }
 
 const ProjectCard = ({

@@ -37,8 +37,8 @@ const ProjectsSection = () => {
             </div>
 
             {categories.map((category) => {
-              const filteredProjects = projects.filter(
-                (project) => project.category === category,
+              const filteredProjects = projects.filter((project) =>
+                project.categories.includes(category),
               )
 
               return (
