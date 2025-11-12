@@ -12,19 +12,13 @@ export const projects: ProjectProps[] = [
     categories: ["Full Stack"],
   },
   {
-    title: "Storage and File Sharing Platform",
+    title: "LinaChat - Real-Time Chat App",
     description:
-      "A storage management and file sharing platform that lets users effortlessly upload, organize, and share files.",
-    technologies: [
-      "Next.js",
-      "Appwrite",
-      "TypeScript",
-      "Rest API",
-      "Tailwind CSS",
-    ],
-    repoUrl: "https://github.com/shamar-morrison/storage-management",
-    liveUrl: "https://storage-management-nu.vercel.app",
-    imageUrl: "/storeit.png",
+      "A real-time chat app that allows users to join chat rooms, communicate with each other in real-time, invite friends, and more.",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Supabase"],
+    repoUrl: "https://github.com/shamar-morrison/real-time-chat",
+    liveUrl: "https://real-time-chat-plum-mu.vercel.app/",
+    imageUrl: "/lina-chat.png",
     categories: ["Full Stack"],
   },
   {
