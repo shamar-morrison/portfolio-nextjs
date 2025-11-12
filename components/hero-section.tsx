@@ -14,8 +14,9 @@ const HeroSection = () => {
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="text-center max-w-3xl mx-auto"
         >
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4">
