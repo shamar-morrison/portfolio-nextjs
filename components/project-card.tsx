@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Code, ExternalLink } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { Category } from "./projects-section"
 
 export interface ProjectProps {
@@ -32,11 +33,13 @@ const ProjectCard = ({
 }: ProjectProps) => {
   return (
     <Card className="overflow-hidden border border-gray-200 dark:border-gray-800 h-full flex flex-col transition-all duration-300 hover:shadow-lg">
-      <div className="h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
-        <img
+      <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
+        <Image
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover object-center"
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <CardHeader>
