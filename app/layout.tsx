@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
     images: [
       {
-        url: "/meta-image.png",
+        url: "/meta-image.webp",
         width: 1200,
         height: 630,
         alt: "Shamar — Full-Stack Web & Mobile Developer",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Shamar | Full-Stack Web & Mobile Developer",
     description:
       "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications.",
-    images: ["/meta-image.png"],
+    images: ["/meta-image.webp"],
     creator: "@theavgcoder",
     site: "@theavgcoder",
   },

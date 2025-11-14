@@ -8,7 +8,7 @@ export const projects: ProjectProps[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Rest API"],
     repoUrl: "https://github.com/shamar-morrison/bingebox",
     liveUrl: "https://bingebox-bay.vercel.app",
-    imageUrl: "/bingebox.png",
+    imageUrl: "/bingebox.webp",
     categories: ["Full Stack"],
   },
   {
@@ -18,7 +18,7 @@ export const projects: ProjectProps[] = [
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Supabase"],
     repoUrl: "https://github.com/shamar-morrison/real-time-chat",
     liveUrl: "https://real-time-chat-plum-mu.vercel.app/",
-    imageUrl: "/lina-chat.png",
+    imageUrl: "/lina-chat.webp",
     categories: ["Full Stack"],
   },
   {
@@ -35,7 +35,7 @@ export const projects: ProjectProps[] = [
     ],
     repoUrl: "https://github.com/shamar-morrison/suburbia-skate",
     liveUrl: "https://suburbia-skates-hxh.netlify.app/",
-    imageUrl: "/skate.png",
+    imageUrl: "/skate.webp",
     categories: ["Full Stack"],
   },
   {
@@ -52,7 +52,7 @@ export const projects: ProjectProps[] = [
     ],
     repoUrl: "https://github.com/shamar-morrison/music-api",
     liveUrl: "https://music-api-dnrm.onrender.com",
-    imageUrl: "/music-api.png",
+    imageUrl: "/music-api.webp",
     categories: ["Backend APIs"],
   },
 ]
