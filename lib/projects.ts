@@ -12,7 +12,7 @@ export const projects: ProjectProps[] = [
     categories: ["Full Stack"],
   },
   {
-    title: "LinaChat - Real-Time Chat App",
+    title: "Real-Time Chat App",
     description:
       "A real-time chat app that allows users to join chat rooms, communicate with each other in real-time, invite friends, and more.",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Supabase"],
@@ -21,21 +21,31 @@ export const projects: ProjectProps[] = [
     imageUrl: "/lina-chat.webp",
     categories: ["Full Stack"],
   },
+  // {
+  //   title: "Suburbia Skates - Online Shop",
+  //   description:
+  //     "A modern online store which features rich 3D animations, particle effects, and an interactive skateboard customizer.",
+  //   technologies: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "GSAP",
+  //     "Matter.js",
+  //     "Three.js",
+  //     "CMS",
+  //   ],
+  //   repoUrl: "https://github.com/shamar-morrison/suburbia-skate",
+  //   liveUrl: "https://suburbia-skates-hxh.netlify.app/",
+  //   imageUrl: "/skate.webp",
+  //   categories: ["Full Stack"],
+  // },
   {
-    title: "Suburbia Skates - Online Shop",
+    title: "AI Resume Analyzer",
     description:
-      "A modern online store which features rich 3D animations, particle effects, and an interactive skateboard customizer.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "GSAP",
-      "Matter.js",
-      "Three.js",
-      "CMS",
-    ],
-    repoUrl: "https://github.com/shamar-morrison/suburbia-skate",
-    liveUrl: "https://suburbia-skates-hxh.netlify.app/",
-    imageUrl: "/skate.webp",
+      "An AI web application that analyzes resumes against a set of predefined metrics and provides a detailed report on the results.",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Gemini API"],
+    repoUrl: "https://github.com/shamar-morrison/ai-resume-analyzer",
+    liveUrl: "https://ai-resume-analyzer-sigma-pearl.vercel.app",
+    imageUrl: "/resume-ai.webp",
     categories: ["Full Stack"],
   },
   {
