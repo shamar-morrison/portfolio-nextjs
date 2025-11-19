@@ -2,17 +2,27 @@ import type { ProjectProps } from "@/components/project-card"
 
 export const projects: ProjectProps[] = [
   {
-    title: "BingeBox - Streaming Platform",
+    title: "DentWise  - AI Dental Platform",
     description:
-      "A full-featured streaming platform with HD streaming for Movies, TV Shows and Anime. The ultimate destination for binge watchers.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Rest API"],
-    repoUrl: "https://github.com/shamar-morrison/bingebox",
-    liveUrl: "https://bingebox-bay.vercel.app",
-    imageUrl: "/bingebox.webp",
+      "DentWise is an AI dental platform that provides a complete solution for managing dental practices.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Voice AI"],
+    repoUrl: "https://github.com/shamar-morrison/dentwise-ai-dental",
+    liveUrl: "https://dentwise-ai-dental.vercel.app",
+    imageUrl: "/dentwise.webp",
     categories: ["Full Stack"],
   },
+  // {
+  //   title: "BingeBox - Streaming Platform",
+  //   description:
+  //     "A full-featured streaming platform with HD streaming for Movies, TV Shows and Anime. The ultimate destination for binge watchers.",
+  //   technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Rest API"],
+  //   repoUrl: "https://github.com/shamar-morrison/bingebox",
+  //   liveUrl: "https://bingebox-bay.vercel.app",
+  //   imageUrl: "/bingebox.webp",
+  //   categories: ["Full Stack"],
+  // },
   {
-    title: "Real-Time Chat App",
+    title: "LinaChat - Live Messaging App",
     description:
       "A real-time chat app that allows users to join chat rooms, communicate with each other in real-time, invite friends, and more.",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Supabase"],
@@ -39,7 +49,7 @@ export const projects: ProjectProps[] = [
   //   categories: ["Full Stack"],
   // },
   {
-    title: "AI Resume Analyzer",
+    title: "ResumeAI - Resume Analyzer",
     description:
       "An AI web application that analyzes resumes against a set of predefined metrics and provides a detailed report on the results.",
     technologies: ["Next.js", "TypeScript", "MongoDB", "Gemini API"],
