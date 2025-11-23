@@ -5,7 +5,13 @@ export const projects: ProjectProps[] = [
     title: "DentWise  - AI Dental Platform",
     description:
       "DentWise is an AI dental platform that provides a complete solution for managing dental practices.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Voice AI"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Voice AI",
+    ],
     repoUrl: "https://github.com/shamar-morrison/dentwise-ai-dental",
     liveUrl: "https://dentwise-ai-dental.vercel.app",
     imageUrl: "/dentwise.webp",
@@ -74,5 +80,15 @@ export const projects: ProjectProps[] = [
     liveUrl: "https://music-api-dnrm.onrender.com",
     imageUrl: "/music-api.webp",
     categories: ["Backend APIs"],
+  },
+  {
+    title: "Movie Finder - Discover & Download Movies",
+    description:
+      "Movie Finder is a movie discovery app that allows users to search for movies and download them via torrents.",
+    technologies: ["Expo", "React Native", "APIs"],
+    repoUrl: "",
+    liveUrl: "https://movie-finder-landing-page.vercel.app/",
+    imageUrl: "/movie-finder.webp",
+    categories: ["Mobile Apps"],
   },
 ]

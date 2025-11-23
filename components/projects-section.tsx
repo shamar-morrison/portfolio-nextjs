@@ -4,7 +4,7 @@ import { projects } from "@/lib/projects"
 import ProjectCard from "./project-card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 
-const categories = ["Full Stack", "Backend APIs"] as const
+const categories = ["Full Stack", "Backend APIs", "Mobile Apps"] as const
 export type Category = (typeof categories)[number]
 
 const ProjectsSection = () => {
