@@ -86,7 +86,7 @@ export const projects: ProjectProps[] = [
     description:
       "Movie Finder is a movie discovery app that allows users to search for movies and download them via torrents.",
     technologies: ["Expo", "React Native", "APIs"],
-    repoUrl: "",
+    repoUrl: "https://github.com/shamar-morrison/torrent-movie-downloader",
     liveUrl: "https://movie-finder-landing-page.vercel.app/",
     imageUrl: "/movie-finder.webp",
     categories: ["Mobile Apps"],
