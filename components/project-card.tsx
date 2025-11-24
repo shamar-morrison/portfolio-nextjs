@@ -35,6 +35,7 @@ const ProjectCard = ({
     <Card className="overflow-hidden border border-gray-200 dark:border-gray-800 h-full flex flex-col transition-all duration-300 hover:shadow-lg">
       <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
         <Image
+          priority
           src={imageUrl}
           alt={title}
           fill
