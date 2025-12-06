@@ -23,12 +23,12 @@ const ProjectsSection = () => {
 
           <Tabs defaultValue={categories[0]} className="mb-12">
             <div className="flex justify-center mb-12">
-              <TabsList className="bg-gray-100 dark:bg-gray-900 p-1 rounded-full h-auto">
+              <TabsList className="bg-gray-100 dark:bg-gray-900 p-1 rounded-full h-auto max-w-full overflow-x-auto flex-nowrap">
                 {categories.map((category) => (
                   <TabsTrigger
                     key={category}
                     value={category}
-                    className="px-6 py-3 text-sm font-medium rounded-full data-[state=active]:bg-hero-gradient data-[state=active]:text-white data-[state=active]:shadow-none transition-all"
+                    className="px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium rounded-full whitespace-nowrap data-[state=active]:bg-hero-gradient data-[state=active]:text-white data-[state=active]:shadow-none transition-all"
                   >
                     {category}
                   </TabsTrigger>
