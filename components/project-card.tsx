@@ -30,7 +30,10 @@ const ProjectCard = ({
   repoUrl,
   liveUrl,
   imageUrl,
+  categories,
 }: ProjectProps) => {
+  const isMobileApp = categories.includes("Mobile Apps")
+
   return (
     <Card className="overflow-hidden border border-gray-200 dark:border-gray-800 h-full flex flex-col transition-all duration-300 hover:shadow-lg">
       <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
@@ -75,7 +78,7 @@ const ProjectCard = ({
         >
           <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="h-4 w-4" />
-            Live Demo
+            {isMobileApp ? "Store Page" : "Live Demo"}
           </Link>
         </Button>
       </CardFooter>
