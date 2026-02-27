@@ -27,6 +27,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+    console.log(isMenuOpen)
   }
 
   const handleSmoothScroll = (
