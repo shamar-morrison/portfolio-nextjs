@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Code, Send } from "lucide-react"
+import { Code } from "lucide-react"
 
 const HeroSection = () => {
   return (
@@ -38,17 +38,6 @@ const HeroSection = () => {
               <Link href="#projects">
                 <Code className="h-5 w-5" />
                 View My Projects
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:bg-primary/10 dark:border-primary dark:text-primary dark:hover:bg-primary/10 hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-48 rounded-xl"
-            >
-              <Link href="#contact">
-                <Send className="h-5 w-5" />
-                Contact Me
               </Link>
             </Button>
           </div>

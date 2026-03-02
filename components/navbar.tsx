@@ -78,13 +78,7 @@ const Navbar = () => {
           >
             Projects
           </a>
-          <a
-            href="#contact"
-            onClick={(e) => handleSmoothScroll(e, "#contact")}
-            className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
-          >
-            Contact
-          </a>
+
           <Button
             asChild
             className="bg-cv-gradient hover:opacity-90 rounded-xl shadow-md"
@@ -126,13 +120,7 @@ const Navbar = () => {
             >
               Projects
             </a>
-            <a
-              href="#contact"
-              onClick={(e) => handleSmoothScroll(e, "#contact")}
-              className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors py-2"
-            >
-              Contact
-            </a>
+
             <Button
               asChild
               className="bg-cv-gradient hover:opacity-90 rounded-xl shadow-md w-full mt-2"
