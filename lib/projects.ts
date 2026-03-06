@@ -23,7 +23,7 @@ export const projects: ProjectProps[] = [
       "ShowSeek is a movie and TV tracker that allows users to discover, create and manage lists of movies and TV shows.",
     technologies: ["Next.js", "TypeScript", "Firebase", "Rest API"],
     repoUrl: "https://github.com/shamar-morrison/show-seek-web",
-    liveUrl: "https://show-seek-web.vercel.app",
+    liveUrl: "https://show-seek-web.shamar-webdev.workers.dev",
     imageUrl: "/showseek.png",
     categories: ["Full Stack"],
   },
