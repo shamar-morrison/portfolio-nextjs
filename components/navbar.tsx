@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const RESUME_ID = "1zu5bFkcpGQEf51dMGEpPX34jIKemqYat" // Google Drive File ID
+  const RESUME_ID = "13mORJ50BSa8fZZTySLjoGB90fR-qTMun" // Google Drive File ID
   const CVLink = `https://drive.google.com/uc?export=download&id=${RESUME_ID}`
 
   useEffect(() => {
