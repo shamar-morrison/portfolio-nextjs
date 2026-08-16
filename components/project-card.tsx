@@ -66,15 +66,12 @@ const ProjectCard = ({
         </CardDescription>
       </CardContent>
       <CardFooter className="flex justify-between gap-2">
-        <Button asChild variant="outline" className="flex-1 rounded-xl">
-          {repoUrl ? <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
+        {repoUrl && <Button asChild variant="outline" className="flex-1 rounded-xl">
+          <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
             <Code className="h-4 w-4" />
             Code
-          </Link> : <div className="flex items-center gap-2">
-            <Code className="h-4 w-4" />
-            Code (Private)
-          </div>}
-        </Button>
+          </Link>
+        </Button>}
         <Button
           asChild
           className="bg-hero-gradient hover:opacity-90 flex-1 rounded-xl"
