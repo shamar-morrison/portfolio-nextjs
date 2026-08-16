@@ -38,25 +38,15 @@ const AboutSection = () => {
 
           <div className="space-y-6 text-gray-700 dark:text-gray-300">
             <p className="text-lg">
-              I'm a passionate Full-Stack Developer with expertise in building
-              web and mobile applications. With a strong foundation in modern
-              JavaScript frameworks and libraries, I create responsive,
-              user-friendly applications that deliver exceptional user
-              experiences.
+              I'm a full-stack and mobile engineer with 5+ years of experience building products that ship and scale. Most recently, I led engineering at Edufocal, where I drove a Next.js 14 modernization that cut load times by 60% and improved reliability by 85%, while managing a team of 5 engineers and 2 designers and maintaining 99.9% uptime. Before that, I built a React Native app at Herald Ltd. that reached 100,000+ downloads and a 4.5-star rating.
             </p>
 
             <p className="text-lg">
-              My journey in professional software development began in January
-              of 2020, and since then, I've worked on various projects ranging
-              from e-commerce platforms to complex enterprise applications. I'm
-              constantly learning and adapting to new technologies to stay at
-              the forefront of web development.
+              Alongside client and full-time work, I design and build my own products end to end, including ShowSeek, which has reached the top 3 in its category organically in Brazil. I also run a small development agency, taking projects from architecture through delivery.
             </p>
 
             <p className="text-lg">
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing my knowledge
-              through mentoring.
+              My core stack is React, Next.js, React Native, TypeScript, and Node.js, with production experience integrating LLMs (Claude, Gemini, GPT, Vapi) into real systems.
             </p>
           </div>
 

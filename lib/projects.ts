@@ -4,7 +4,7 @@ export const projects: ProjectProps[] = [
   {
     title: "DentWise  - AI Dental Platform",
     description:
-      "DentWise is an AI dental platform that provides a complete solution for managing dental practices.",
+      "Full-stack dental practice platform built end-to-end, including an AI voice assistant (Vapi) that handles patient scheduling and guidance without staff intervention. Backend built on Prisma + PostgreSQL with secure auth (Clerk) and automated email workflows (Resend).",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -20,7 +20,7 @@ export const projects: ProjectProps[] = [
   {
     title: "ShowSeek - Movie & TV Show Tracker",
     description:
-      "ShowSeek is a movie and TV tracker that allows users to discover, create and manage lists of movies and TV shows.",
+      "Companion web app to ShowSeek, a movie and TV tracker I designed and built independently for React Native. The mobile app is live on Google Play, reached the top 3 in its category organically in Brazil, and supports localization across Portuguese, Italian, and Turkish.",
     technologies: ["Next.js", "TypeScript", "Firebase", "Rest API"],
     repoUrl: "https://github.com/shamar-morrison/show-seek-web",
     liveUrl: "https://show-seek-web.shamar-webdev.workers.dev",
@@ -28,13 +28,13 @@ export const projects: ProjectProps[] = [
     categories: ["Full Stack"],
   },
   {
-    title: "ResumeAI - Resume Analyzer",
+    title: "Evolutionz - Gym Management Platform",
     description:
-      "An AI web application that analyzes resumes against a set of predefined metrics and provides a detailed report on the results.",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Gemini API"],
-    repoUrl: "https://github.com/shamar-morrison/ai-resume-analyzer",
-    liveUrl: "https://ai-resume-analyzer-sigma-pearl.vercel.app",
-    imageUrl: "/resume-ai.webp",
+      "Built and maintain a full gym management PWA for an active client: PT payments, revenue reporting, trainer scheduling, and biometric access control via HikVision integration. Designed and shipped an automated invoicing system using a Cloudflare Worker with PDFShift and Brevo, removing manual billing entirely.",
+    technologies: ["Next.js", "TypeScript", "Supabase", "Cloudflare Workers"],
+    repoUrl: undefined,
+    liveUrl: undefined,
+    imageUrl: "/evo.png",
     categories: ["Full Stack"],
   },
   {
