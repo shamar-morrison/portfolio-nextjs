@@ -28,7 +28,14 @@ const technologies = [
   "Docker",
 ]
 
+const experienceStartYear = 2021
+
 const AboutSection = () => {
+  const experienceYears = Math.max(
+    0,
+    new Date().getFullYear() - experienceStartYear,
+  )
+
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
@@ -52,9 +59,9 @@ const AboutSection = () => {
 
               <div className="space-y-6 text-gray-700 dark:text-gray-300">
                 <p className="text-lg">
-                  I'm a full-stack and mobile engineer with 5+ years of
-                  experience building products that ship and scale. Most
-                  recently, I led engineering at Edufocal, where I drove a
+                  I'm a full-stack and mobile engineer with {experienceYears}+
+                  years of experience building products that ship and scale.
+                  Most recently, I led engineering at Edufocal, where I drove a
                   Next.js 14 modernization that cut load times by 60% and
                   improved reliability by 85%, while managing a team of 5
                   engineers and 2 designers and maintaining 99.9% uptime. Before
