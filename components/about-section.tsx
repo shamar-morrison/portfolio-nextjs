@@ -46,7 +46,7 @@ const AboutSection = () => {
             </div>
 
             <div>
-              <h2 className="mb-8 text-3xl font-black tracking-tight md:text-4xl">
+              <h2 className="mb-8 text-center text-3xl font-black tracking-tight md:text-4xl lg:text-left">
                 About <span className="gradient-text">Me</span>
               </h2>
 
