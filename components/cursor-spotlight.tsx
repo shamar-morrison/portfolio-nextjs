@@ -23,7 +23,12 @@ const CursorSpotlight = () => {
     }
   }, [])
 
-  return <div className="cursor-spotlight pointer-events-none fixed inset-0 z-0" aria-hidden="true" />
+  return (
+    <div
+      className="cursor-spotlight pointer-events-none fixed inset-0 z-30 transition duration-300"
+      aria-hidden="true"
+    />
+  )
 }
 
 export default CursorSpotlight
