@@ -16,10 +16,10 @@ const HeroSection = () => {
       className="relative z-10 pb-14 pt-24 lg:hidden"
     >
       <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-        Shamar
+        Shamar Morrison
       </h1>
       <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-        Full-Stack Web &amp; Mobile Developer
+        Web &amp; Mobile Engineer
       </h2>
       <p className="mt-4 max-w-xs leading-normal text-slate-400">
         I build modern, responsive, and user-friendly applications using

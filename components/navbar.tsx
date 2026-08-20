@@ -69,17 +69,16 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="hidden lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+      <header className="hidden lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:self-start lg:flex-col lg:justify-between lg:py-24">
         <div>
           <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-            <a href="/">Shamar</a>
+            <a href="/">Shamar Morrison</a>
           </h1>
           <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-            Full-Stack Web &amp; Mobile Developer
+Web &amp; Mobile Engineer
           </h2>
           <p className="mt-4 max-w-xs leading-normal text-slate-400">
-            I build modern, responsive, and user-friendly applications using
-            various technologies.
+            I build modern, responsive, and user-friendly applications for web and mobile.
           </p>
 
           <nav className="mt-16 w-max" aria-label="In-page jump links">

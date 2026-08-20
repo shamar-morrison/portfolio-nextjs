@@ -102,7 +102,7 @@ export default function RootLayout({
               jobTitle: "Full-Stack Web & Mobile Developer",
               description:
                 "Full-Stack Developer specializing in modern, responsive applications",
-              url: "https://shamar.dev",
+              url: "https://shamar.online",
               sameAs: [
                 "https://github.com/shamar-morrison",
                 "https://www.linkedin.com/in/shamar-morrison-7b641b364/",

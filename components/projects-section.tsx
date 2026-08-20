@@ -23,23 +23,14 @@ const ProjectsSection = () => {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-8 text-center text-3xl font-bold tracking-tight text-slate-200 md:text-4xl">
-            My Projects
-          </h2>
-
-          <p className="mx-auto mb-8 max-w-3xl text-center text-lg text-slate-400">
-            Here are some of the projects I've worked on. Each project
-            represents different skills and technologies I've mastered.
-          </p>
-
           <Tabs defaultValue={categories[0]} className="mb-12">
-            <div className="flex justify-center mb-12">
-              <TabsList className="h-auto max-w-full flex-nowrap overflow-x-auto rounded-full border border-slate-700 bg-slate-800/60 p-1 text-slate-400">
+            <div className="mb-8 flex justify-center">
+              <TabsList className="h-auto max-w-full flex-nowrap overflow-x-auto rounded-full border border-slate-700 bg-slate-800/60 p-0.5 text-slate-400">
                 {categories.map((category) => (
                   <TabsTrigger
                     key={category}
                     value={category}
-                    className="whitespace-nowrap rounded-full px-3 py-2 text-xs font-medium text-slate-400 transition-all hover:text-[#64ffda] data-[state=active]:bg-[#64ffda]/10 data-[state=active]:text-[#64ffda] data-[state=active]:shadow-none sm:px-6 sm:py-3 sm:text-sm"
+                    className="whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-medium text-slate-400 transition-all hover:text-[#64ffda] data-[state=active]:bg-[#64ffda]/10 data-[state=active]:text-[#64ffda] data-[state=active]:shadow-none sm:px-3 sm:py-1.5 sm:text-xs"
                   >
                     {category}
                   </TabsTrigger>
