@@ -1,5 +1,4 @@
-export const resumeUrl =
-  "https://drive.google.com/file/d/13mORJ50BSa8fZZTySLjoGB90fR-qTMun/view"
+export const resumeUrl = "/resume.pdf"
 
 export const socialLinks = [
   {
