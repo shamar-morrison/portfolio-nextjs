@@ -1,31 +1,32 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import Link from "next/link"
 import { Code } from "lucide-react"
 
 const HeroSection = () => {
+  const reduceMotion = useReducedMotion()
+
   return (
-    <section
+    <motion.section
       id={"home"}
-      className="min-h-screen flex items-center justify-center pt-16 pb-20 px-4 bg-gradient-to-br from-white to-portfolio-peach/30 dark:from-gray-900 dark:to-gray-800"
+      initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+      animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-20 pt-16"
     >
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4">
-            Hey, I&apos;m <span className="gradient-text">Shamar</span>
+          <h1 className="mb-4 text-5xl font-black tracking-tight text-slate-200 md:text-7xl">
+            Hey, I&apos;m <span className="text-[#64ffda]">Shamar</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8 text-gray-700 dark:text-gray-300">
+          <h2 className="mb-8 text-2xl font-semibold tracking-tight text-slate-300 md:text-3xl">
             Full-Stack Web & Mobile Developer
           </h2>
-          <p className="text-lg md:text-xl mb-10 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-slate-400 md:text-xl">
             I build modern, responsive, and user-friendly applications using
             various technologies.
           </p>
@@ -33,7 +34,7 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-hero-gradient hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-48 rounded-xl"
+              className="w-full rounded border border-[#64ffda] bg-transparent text-[#64ffda] shadow-none transition-all duration-200 hover:-translate-y-1 hover:bg-[#64ffda]/10 hover:text-[#64ffda] sm:w-48"
             >
               <Link href="#projects">
                 <Code className="h-5 w-5" />
@@ -43,7 +44,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

@@ -25,16 +25,16 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#ff3870",
-          foreground: "#ffffff",
+          DEFAULT: "#64ffda",
+          foreground: "#0f172a",
         },
         secondary: {
-          DEFAULT: "#c300c3",
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
-          DEFAULT: "#ff1f8e",
-          foreground: "#ffffff",
+          DEFAULT: "#64ffda",
+          foreground: "#0f172a",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -51,15 +51,6 @@ const config: Config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-        portfolio: {
-          pink: "#ff3870",
-          purple: "#c300c3",
-          magenta: "#f92c8b",
-          deepPurple: "#b02cd6",
-          hotPink: "#ff1f8e",
-          peach: "#ffd6d6",
-          orange: "#ffbd84",
         },
       },
       borderRadius: {
@@ -84,11 +75,6 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(to right, #f92c8b 0, #b02cd6 100%)",
-        "cv-gradient": "linear-gradient(to right, #ffbd84 0, #ff1f8e 100%)",
       },
     },
   },

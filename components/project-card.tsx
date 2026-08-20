@@ -35,25 +35,25 @@ const ProjectCard = ({
   const isMobileApp = categories.includes("Mobile Apps")
 
   return (
-    <Card className="overflow-hidden border border-gray-200 dark:border-gray-800 h-full flex flex-col transition-all duration-300 hover:shadow-lg">
-      <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
+    <Card className="group flex h-full flex-col overflow-hidden border-slate-700 bg-slate-800/50 text-slate-200 shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-[#64ffda]/60 hover:shadow-xl hover:shadow-slate-950/30">
+      <div className="relative h-48 overflow-hidden bg-slate-800">
         <Image
           priority
           src={imageUrl}
           alt={title}
           fill
-          className="object-cover object-center"
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <CardHeader>
-        <CardTitle className="text-xl font-bold mb-2">{title}</CardTitle>
+        <CardTitle className="mb-2 text-xl font-bold text-slate-200">{title}</CardTitle>
         <div className="flex flex-wrap gap-1">
           {technologies.map((tech, index) => (
             <Badge
               key={index}
               variant="outline"
-              className="bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 border-gray-200 dark:border-gray-700"
+              className="border-slate-700 bg-slate-900/60 text-slate-400"
             >
               {tech}
             </Badge>
@@ -61,12 +61,12 @@ const ProjectCard = ({
         </div>
       </CardHeader>
       <CardContent className="flex-grow">
-        <CardDescription className="text-gray-600 dark:text-gray-400">
+        <CardDescription className="text-slate-400">
           {description}
         </CardDescription>
       </CardContent>
       <CardFooter className="flex justify-between gap-2">
-        {repoUrl && <Button asChild variant="outline" className="flex-1 rounded-xl">
+        {repoUrl && <Button asChild variant="outline" className="flex-1 rounded border-slate-600 bg-transparent text-slate-300 shadow-none transition-all hover:-translate-y-0.5 hover:border-[#64ffda] hover:bg-[#64ffda]/10 hover:text-[#64ffda]">
           <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
             <Code className="h-4 w-4" />
             Code
@@ -74,7 +74,7 @@ const ProjectCard = ({
         </Button>}
         <Button
           asChild
-          className="bg-hero-gradient hover:opacity-90 flex-1 rounded-xl"
+          className="flex-1 rounded border border-[#64ffda] bg-transparent text-[#64ffda] shadow-none transition-all hover:-translate-y-0.5 hover:bg-[#64ffda]/10 hover:text-[#64ffda]"
         >
           {liveUrl && <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="h-4 w-4" />

@@ -69,13 +69,13 @@ export const metadata: Metadata = {
     "format-detection": "telephone=no",
     "mobile-web-app-capable": "yes",
     "msapplication-config": "/browserconfig.xml",
-    "msapplication-TileColor": "#f92c8b",
+    "msapplication-TileColor": "#0f172a",
     "msapplication-tap-highlight": "no",
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: "#f92c8b",
+  themeColor: "#0f172a",
   width: "device-width",
   initialScale: 1,
 }
