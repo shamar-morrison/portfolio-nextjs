@@ -75,7 +75,7 @@ const ProjectsSection = () => {
             })}
           </Tabs>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12">
             <a
               href="https://github.com/shamar-morrison?tab=repositories"
               target="_blank"

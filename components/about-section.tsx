@@ -17,7 +17,7 @@ const AboutSection = () => {
           </h2>
           <div className="space-y-6 text-slate-400">
             <p>
-              Hey there! I'm Shamar, and I like building things. I'm a full-stack and mobile engineer with {experienceYears}+ years
+              Hey there! I'm Shamar, and I like building things. I'm a full-stack web and mobile engineer with {experienceYears}+ years
               of experience building products that ship and scale. Most recently,
               I led engineering at{" "}
               <a
