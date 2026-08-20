@@ -82,8 +82,15 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="group inline-flex items-baseline font-semibold leading-tight text-slate-200 transition-colors hover:text-teal-300 focus-visible:text-teal-300 focus-visible:outline-none"
             >
-              View More on GitHub
-              <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-[3px] transition-transform group-hover:translate-x-[0.9px] group-hover:-translate-y-[0.9px] group-focus-visible:-translate-y-[0.9px] group-focus-visible:-translate-x-[0.9px] motion-reduce:transition-none" aria-hidden="true" />
+              <span>
+                View More on GitHub
+                <span className="inline-block">
+                  <ArrowUpRight
+                    className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                    aria-hidden="true"
+                  />
+                </span>
+              </span>
             </a>
           </div>
         </div>
