@@ -20,10 +20,10 @@ const HeroSection = () => {
         <motion.div
           className="text-center max-w-3xl mx-auto"
         >
-          <h1 className="mb-4 text-5xl font-black tracking-tight text-slate-200 md:text-7xl">
-            Hey, I&apos;m <span className="text-[#64ffda]">Shamar</span>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+            Hey, I&apos;m Shamar
           </h1>
-          <h2 className="mb-8 text-2xl font-semibold tracking-tight text-slate-300 md:text-3xl">
+          <h2 className="mb-8 mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
             Full-Stack Web & Mobile Developer
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-slate-400 md:text-xl">
@@ -34,7 +34,8 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="w-full rounded border border-[#64ffda] bg-transparent text-[#64ffda] shadow-none transition-all duration-200 hover:-translate-y-1 hover:bg-[#64ffda]/10 hover:text-[#64ffda] sm:w-48"
+              variant="glass"
+              className="w-full sm:w-48"
             >
               <Link href="#projects">
                 <Code className="h-5 w-5" />

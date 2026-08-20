@@ -4,7 +4,6 @@ import AboutSection from "@/components/about-section"
 import ProjectsSection from "@/components/projects-section"
 import CursorSpotlight from "@/components/cursor-spotlight"
 
-import Footer from "@/components/footer"
 
 export default function Home() {
   return (
@@ -14,8 +13,6 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-
-      <Footer />
     </main>
   )
 }

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
+import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import { FaAws } from "react-icons/fa"
 import type { IconType } from "react-icons"
@@ -48,6 +49,8 @@ const technologies: { name: string; icon: IconType }[] = [
 ]
 
 const experienceStartYear = 2021
+const resumeId = "13mORJ50BSa8fZZTySLjoGB90fR-qTMun"
+const resumeUrl = `https://drive.google.com/file/d/${resumeId}/view`
 
 const AboutSection = () => {
   const reduceMotion = useReducedMotion()
@@ -80,12 +83,12 @@ const AboutSection = () => {
             </div>
 
             <div>
-              <h2 className="mb-8 text-center text-3xl font-black tracking-tight text-slate-200 md:text-4xl lg:text-left">
-                About <span className="text-[#64ffda]">Me</span>
+              <h2 className="mb-8 text-center text-3xl font-bold tracking-tight text-slate-200 md:text-4xl lg:text-left">
+                About Me
               </h2>
 
               <div className="space-y-6 text-slate-400">
-                <p className="text-lg">
+                <p>
                   I'm a full-stack and mobile engineer with {experienceYears}+
                   years of experience building products that ship and scale.
                   Most recently, I led engineering at Edufocal, where I drove a
@@ -96,7 +99,7 @@ const AboutSection = () => {
                   100,000+ downloads and a 4.5-star rating.
                 </p>
 
-                <p className="text-lg">
+                <p>
                   Alongside client and full-time work, I design and build my own
                   products end to end, including ShowSeek, which has reached the
                   top 3 in its category organically in Brazil. I also run a
@@ -104,7 +107,7 @@ const AboutSection = () => {
                   through delivery.
                 </p>
 
-                <p className="text-lg">
+                <p>
                   My core stack is React, Next.js, React Native, TypeScript, and
                   Node.js, with production experience integrating LLMs (Claude,
                   Gemini, GPT, Vapi) into real systems.
@@ -125,7 +128,7 @@ const AboutSection = () => {
                     type="button"
                     title={name}
                     aria-label={name}
-                    className="grid h-11 w-11 place-items-center rounded border border-transparent text-2xl text-slate-400 transition-all duration-200 hover:-translate-y-1 hover:border-[#64ffda]/50 hover:text-[#64ffda] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64ffda]"
+                    className="grid h-11 w-11 place-items-center rounded border border-transparent text-2xl text-slate-400 transition-colors duration-200 hover:border-[#64ffda]/50 hover:text-[#64ffda] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64ffda]"
                   >
                     <Icon aria-hidden="true" />
                   </button>
@@ -135,6 +138,18 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-baseline gap-1 text-base font-semibold leading-tight text-slate-200 transition-colors duration-200 hover:text-[#64ffda] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64ffda] focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            >
+              View Full Résumé
+              <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>

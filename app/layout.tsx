@@ -1,12 +1,16 @@
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 import type React from "react"
 import { Toaster } from "sonner"
 import "./globals.css"
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "900"],
+const inter = localFont({
+  src: [
+    { path: "./fonts/inter-v3-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/inter-v3-500.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/inter-v3-600.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/inter-v3-700.woff2", weight: "700", style: "normal" },
+  ],
   display: "swap",
   variable: "--font-inter",
   preload: true,
@@ -87,7 +91,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased">
+      <body className={`${inter.className} font-sans antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Download, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
 
 const navLinks = [
@@ -13,9 +13,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState<string | null>(null)
-
-  const resumeId = "13mORJ50BSa8fZZTySLjoGB90fR-qTMun"
-  const resumeUrl = `https://drive.google.com/file/d/${resumeId}/view`
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10)
@@ -58,10 +55,10 @@ const Navbar = () => {
       href={href}
       onClick={(event) => handleSmoothScroll(event, href)}
       aria-current={activeSection === href ? "page" : undefined}
-      className={`relative py-2 text-sm transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:bg-[#64ffda] after:transition-transform after:duration-200 ${
+      className={`relative py-2 text-sm transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:bg-[#64ffda] after:transition-[width] after:duration-200 ${
         activeSection === href
-          ? "text-[#64ffda] after:w-full after:scale-x-100"
-          : "text-slate-300 hover:text-[#64ffda] after:w-full after:scale-x-0 hover:after:scale-x-100"
+          ? "text-[#64ffda] after:w-full"
+          : "text-slate-300 after:w-0 hover:text-[#64ffda] hover:after:w-full"
       }`}
     >
       {label}
@@ -79,12 +76,6 @@ const Navbar = () => {
       >
         <nav className="hidden items-center space-x-8 md:flex">
           {navLinks.map(({ href, label }) => navigationLink(href, label))}
-          <Button asChild className="rounded border border-[#64ffda] bg-transparent text-[#64ffda] shadow-none transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#64ffda]/10 hover:text-[#64ffda]">
-            <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-              <Download className="h-4 w-4" />
-              Resume
-            </a>
-          </Button>
         </nav>
 
         <Button
@@ -102,12 +93,6 @@ const Navbar = () => {
         <div className="pointer-events-auto w-full border-b border-slate-700 bg-slate-900/95 shadow-lg shadow-slate-950/20 backdrop-blur-md md:hidden">
           <nav className="container mx-auto flex flex-col space-y-3 px-4 py-4">
             {navLinks.map(({ href, label }) => navigationLink(href, label))}
-            <Button asChild className="mt-2 w-full rounded border border-[#64ffda] bg-transparent text-[#64ffda] shadow-none hover:bg-[#64ffda]/10 hover:text-[#64ffda]">
-              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-                <Download className="h-4 w-4" />
-                Resume
-              </a>
-            </Button>
           </nav>
         </div>
       )}

@@ -3,6 +3,7 @@
 import { projects } from "@/lib/projects"
 import ProjectCard from "./project-card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
 import { motion, useReducedMotion } from "framer-motion"
 
 const categories = ["Full Stack", "Backend APIs", "Mobile Apps"] as const
@@ -22,8 +23,8 @@ const ProjectsSection = () => {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-8 text-center text-3xl font-black tracking-tight text-slate-200 md:text-4xl">
-            My <span className="text-[#64ffda]">Projects</span>
+          <h2 className="mb-8 text-center text-3xl font-bold tracking-tight text-slate-200 md:text-4xl">
+            My Projects
           </h2>
 
           <p className="mx-auto mb-8 max-w-3xl text-center text-lg text-slate-400">
@@ -80,14 +81,15 @@ const ProjectsSection = () => {
           </Tabs>
 
           <div className="text-center mt-12">
-            <a
-              href="https://github.com/shamar-morrison?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded border border-[#64ffda] bg-transparent px-6 py-2 text-sm font-bold text-[#64ffda] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#64ffda]/10"
-            >
-              View More on GitHub
-            </a>
+            <Button asChild variant="glass" className="px-6">
+              <a
+                href="https://github.com/shamar-morrison?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View More on GitHub
+              </a>
+            </Button>
           </div>
         </div>
       </div>
