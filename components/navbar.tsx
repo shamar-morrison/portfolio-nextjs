@@ -10,27 +10,58 @@ const sectionLinks = [
   { href: "#projects", label: "Projects" },
 ] as const
 
+type SectionHref = (typeof sectionLinks)[number]["href"]
+
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("#about")
+  const [activeSection, setActiveSection] = useState<SectionHref>("#about")
 
   useEffect(() => {
-    const sections = sectionLinks
-      .map(({ href }) => document.querySelector<HTMLElement>(href))
-      .filter((section): section is HTMLElement => section !== null)
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`)
-          }
+      // Guarantee #projects is active when reaching the bottom of the page
+      if (windowHeight + scrollY >= documentHeight - 50) {
+        setActiveSection("#projects")
+        return
+      }
+
+      // Guarantee #about is active when near the top of the page (Hero / top of About)
+      if (scrollY < 150) {
+        setActiveSection("#about")
+        return
+      }
+
+      // Offset from top of viewport for activating sections (accounting for header)
+      const offset = 200
+
+      const sections = sectionLinks
+        .map(({ href }) => {
+          const el = document.querySelector<HTMLElement>(href)
+          return el ? { href, top: el.getBoundingClientRect().top } : null
         })
-      },
-      { rootMargin: "0% 0% -70% 0%", threshold: 0 },
-    )
+        .filter((s): s is { href: SectionHref; top: number } => s !== null)
 
-    sections.forEach((section) => observer.observe(section))
-    return () => observer.disconnect()
+      let currentSection: SectionHref = sectionLinks[0].href
+      for (const section of sections) {
+        if (section.top <= offset) {
+          currentSection = section.href
+        }
+      }
+
+      setActiveSection(currentSection)
+    }
+
+    handleScroll()
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    window.addEventListener("resize", handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("resize", handleScroll)
+    }
   }, [])
 
   const desktopSectionLink = ({ href, label }: (typeof sectionLinks)[number]) => {
