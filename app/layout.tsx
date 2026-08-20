@@ -17,7 +17,7 @@ const inter = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shamar.dev"),
+  metadataBase: new URL("https://shamar.online"),
   title: "Shamar • Web & Mobile Engineer",
   description:
     "Portfolio website for Shamar, A Full-Stack Web & Mobile Engineer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shamar.dev",
+    url: "https://shamar.online",
     siteName: "Shamar Portfolio",
     title: "Shamar • Web & Mobile Engineer",
     description:
