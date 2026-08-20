@@ -122,7 +122,7 @@ Web &amp; Mobile Engineer
                       href={href}
                       aria-current={isActive ? "page" : undefined}
                       className={`inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider transition-colors duration-150 focus-visible:outline-none sm:text-xs ${
-                        isActive ? "text-slate-200" : "text-slate-300 hover:text-slate-200"
+                        isActive ? "text-slate-200" : "text-slate-500 hover:text-slate-200"
                       }`}
                     >
                       {label}
@@ -135,7 +135,7 @@ Web &amp; Mobile Engineer
                   href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider text-slate-300 transition-colors duration-150 hover:text-slate-200 focus-visible:outline-none focus-visible:text-slate-200 sm:text-xs"
+                  className="group inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider text-slate-500 transition-colors duration-150 hover:text-slate-200 focus-visible:outline-none focus-visible:text-slate-200 sm:text-xs"
                 >
                   Résumé
                   <ArrowUpRight className="ml-1 h-3 w-3 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-focus-visible:-translate-y-0.5 group-focus-visible:translate-x-0.5 motion-reduce:transition-none" aria-hidden="true" />
