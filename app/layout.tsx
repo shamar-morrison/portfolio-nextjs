@@ -18,9 +18,9 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://shamar.dev"),
-  title: "Shamar | Full-Stack Web & Mobile Developer",
+  title: "Shamar • Web & Mobile Engineer",
   description:
-    "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
+    "Portfolio website for Shamar, A Full-Stack Web & Mobile Engineer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
   keywords: [
     "Full-Stack Developer",
     "Web Developer",
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "Next.js",
     "Portfolio",
     "Shamar",
+    "Engineer",
   ],
   authors: [{ name: "Shamar" }],
   creator: "Shamar",
@@ -39,23 +40,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://shamar.dev",
     siteName: "Shamar Portfolio",
-    title: "Shamar | Full-Stack Web & Mobile Developer",
+    title: "Shamar • Web & Mobile Engineer",
     description:
-      "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
+      "Portfolio website for Shamar, a Full-Stack Web & Mobile Engineer specializing in modern, responsive applications. View projects and get in touch for collaboration.",
     images: [
       {
         url: "/meta-image.webp",
         width: 1200,
         height: 630,
-        alt: "Shamar — Full-Stack Web & Mobile Developer",
+        alt: "Shamar • Web & Mobile Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shamar | Full-Stack Web & Mobile Developer",
+    title: "Shamar • Web & Mobile Engineer",
     description:
-      "Portfolio website for Shamar, a Full-Stack Web & Mobile Developer specializing in modern, responsive applications.",
+      "Portfolio website for Shamar, A Web & Mobile Engineer specializing in modern, responsive applications.",
     images: ["/meta-image.webp"],
     creator: "@theavgcoder",
     site: "@theavgcoder",
@@ -99,9 +100,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Shamar",
-              jobTitle: "Full-Stack Web & Mobile Developer",
+              jobTitle: "Full-Stack Web & Mobile Engineer",
               description:
-                "Full-Stack Developer specializing in modern, responsive applications",
+                "Full-Stack Engineer specializing in modern, responsive applications",
               url: "https://shamar.online",
               sameAs: [
                 "https://github.com/shamar-morrison",
