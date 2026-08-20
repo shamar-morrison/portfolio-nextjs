@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.12 }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="relative z-10 py-20"
+      className="relative z-10 scroll-mt-20 pb-16 lg:scroll-mt-24 lg:pb-24"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
@@ -54,27 +54,28 @@ const ProjectsSection = () => {
 
               return (
                 <TabsContent key={category} value={category} className="mt-0">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <ul className="group/list">
                     {filteredProjects.length > 0 ? (
                       filteredProjects.map((project, index) => (
-                        <motion.div
-                          key={index}
+                        <motion.li
+                          key={project.repoUrl ?? project.liveUrl ?? project.title}
+                          className="mb-12"
                           initial={reduceMotion ? false : { opacity: 0, y: 16 }}
                           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                           viewport={{ once: true, amount: 0.1 }}
                           transition={{ duration: 0.35, delay: index * 0.05 }}
                         >
                           <ProjectCard {...project} />
-                        </motion.div>
+                        </motion.li>
                       ))
                     ) : (
-                      <div className="col-span-full text-center py-12">
+                      <li className="py-12 text-center">
                         <p className="text-lg text-slate-400">
                           No projects in this category yet. Check back soon!
                         </p>
-                      </div>
+                      </li>
                     )}
-                  </div>
+                  </ul>
                 </TabsContent>
               )
             })}

@@ -1,102 +1,174 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { resumeUrl, socialLinks } from "@/lib/site"
+import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6"
 import { useEffect, useState } from "react"
 
-const navLinks = [
+const sectionLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-]
+] as const
+
+const socialIcons = {
+  X: FaXTwitter,
+  LinkedIn: FaLinkedinIn,
+  GitHub: FaGithub,
+}
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState<string | null>(null)
+  const [activeSection, setActiveSection] = useState("#about")
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10)
-    handleScroll()
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    const sections = sectionLinks
+      .map(({ href }) => document.querySelector<HTMLElement>(href))
+      .filter((section): section is HTMLElement => section !== null)
 
-  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleEntry = entries.find((entry) => entry.isIntersecting)
-        if (visibleEntry) setActiveSection(`#${visibleEntry.target.id}`)
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`)
+          }
+        })
       },
-      { rootMargin: "-35% 0px -55% 0px" },
+      { rootMargin: "0% 0% -70% 0%", threshold: 0 },
     )
 
-    navLinks.forEach(({ href }) => {
-      const section = document.querySelector(href)
-      if (section) observer.observe(section)
-    })
-
+    sections.forEach((section) => observer.observe(section))
     return () => observer.disconnect()
   }, [])
 
-  const toggleMenu = () => setIsMenuOpen((open) => !open)
+  const desktopSectionLink = ({ href, label }: (typeof sectionLinks)[number]) => {
+    const isActive = activeSection === href
 
-  const handleSmoothScroll = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    target: string,
-  ) => {
-    event.preventDefault()
-    document.querySelector(target)?.scrollIntoView({ behavior: "smooth" })
-    setIsMenuOpen(false)
+    return (
+      <a
+        key={href}
+        href={href}
+        aria-current={isActive ? "page" : undefined}
+        className="group flex items-center py-3 focus-visible:outline-none"
+      >
+        <span
+          aria-hidden="true"
+          className={`mr-4 h-px bg-slate-600 transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-[#64ffda] group-focus-visible:w-16 group-focus-visible:bg-[#64ffda] ${
+            isActive ? "w-16 bg-[#64ffda]" : "w-8"
+          }`}
+        />
+        <span
+          className={`text-xs font-bold uppercase tracking-widest transition-colors duration-150 ${
+            isActive
+              ? "text-[#64ffda]"
+              : "text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
+          }`}
+        >
+          {label}
+        </span>
+      </a>
+    )
   }
 
-  const navigationLink = (href: string, label: string) => (
-    <a
-      key={href}
-      href={href}
-      onClick={(event) => handleSmoothScroll(event, href)}
-      aria-current={activeSection === href ? "page" : undefined}
-      className={`relative py-2 text-sm transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-px after:bg-[#64ffda] after:transition-[width] after:duration-200 ${
-        activeSection === href
-          ? "text-[#64ffda] after:w-full"
-          : "text-slate-300 after:w-0 hover:text-[#64ffda] hover:after:w-full"
-      }`}
-    >
-      {label}
-    </a>
-  )
-
   return (
-    <header className="pointer-events-none fixed left-0 right-0 top-0 z-50 flex flex-col items-center">
-      <div
-        className={`pointer-events-auto flex w-full items-center px-4 transition-all duration-300 md:w-fit md:justify-center md:px-8 ${
-          isScrolled
-            ? "border-b border-slate-700/80 bg-slate-900/90 py-3 shadow-lg shadow-slate-950/20 backdrop-blur-md md:mt-4 md:rounded-full md:border"
-            : "border-transparent bg-transparent py-4 md:mt-0"
-        }`}
-      >
-        <nav className="hidden items-center space-x-8 md:flex">
-          {navLinks.map(({ href, label }) => navigationLink(href, label))}
-        </nav>
+    <>
+      <header className="hidden lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+        <div>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+            <a href="/">Shamar</a>
+          </h1>
+          <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+            Full-Stack Web &amp; Mobile Developer
+          </h2>
+          <p className="mt-4 max-w-xs leading-normal text-slate-400">
+            I build modern, responsive, and user-friendly applications using
+            various technologies.
+          </p>
 
-        <Button
-          variant="ghost"
-          size="icon"
-          className="ml-auto text-slate-200 hover:bg-[#64ffda]/10 hover:text-[#64ffda] md:hidden"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </Button>
-      </div>
-
-      {isMenuOpen && (
-        <div className="pointer-events-auto w-full border-b border-slate-700 bg-slate-900/95 shadow-lg shadow-slate-950/20 backdrop-blur-md md:hidden">
-          <nav className="container mx-auto flex flex-col space-y-3 px-4 py-4">
-            {navLinks.map(({ href, label }) => navigationLink(href, label))}
+          <nav className="mt-16 w-max" aria-label="In-page jump links">
+            <ul>
+              {sectionLinks.map(desktopSectionLink)}
+              <li>
+                <a
+                  href={resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center py-3 focus-visible:outline-none"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-[#64ffda] group-focus-visible:w-16 group-focus-visible:bg-[#64ffda] motion-reduce:transition-none"
+                  />
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 transition-colors duration-150 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                    Resume
+                  </span>
+                </a>
+              </li>
+            </ul>
           </nav>
         </div>
-      )}
-    </header>
+
+        <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
+          {socialLinks.map(({ label, href }) => {
+            const Icon = socialIcons[label]
+
+            return (
+              <li key={label} className="mr-5 shrink-0 text-xs last:mr-0">
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${label} (opens in a new tab)`}
+                  title={label}
+                  className="block text-slate-400 transition-colors duration-150 hover:text-[#64ffda] focus-visible:outline-none focus-visible:text-[#64ffda]"
+                >
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+      </header>
+
+      <header className="fixed inset-x-0 top-0 z-40 border-b border-slate-700/80 bg-slate-900/90 px-4 backdrop-blur-md lg:hidden">
+        <div className="mx-auto flex h-16 max-w-screen-xl items-center justify-between gap-3">
+          <a
+            href="/"
+            className="text-base font-bold tracking-tight text-slate-200 focus-visible:outline-none focus-visible:text-[#64ffda]"
+          >
+            Shamar
+          </a>
+          <nav aria-label="In-page jump links">
+            <ul className="flex items-center gap-3 sm:gap-4">
+              {sectionLinks.map(({ href, label }) => {
+                const isActive = activeSection === href
+
+                return (
+                  <li key={href}>
+                    <a
+                      href={href}
+                      aria-current={isActive ? "page" : undefined}
+                      className={`inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider transition-colors duration-150 focus-visible:outline-none sm:text-xs ${
+                        isActive ? "text-[#64ffda]" : "text-slate-300 hover:text-[#64ffda]"
+                      }`}
+                    >
+                      {label}
+                    </a>
+                  </li>
+                )
+              })}
+              <li>
+                <a
+                  href={resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider text-slate-300 transition-colors duration-150 hover:text-[#64ffda] focus-visible:outline-none focus-visible:text-[#64ffda] sm:text-xs"
+                >
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </>
   )
 }
 

@@ -1,7 +1,6 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
-import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import { FaAws } from "react-icons/fa"
 import type { IconType } from "react-icons"
@@ -49,9 +48,6 @@ const technologies: { name: string; icon: IconType }[] = [
 ]
 
 const experienceStartYear = 2021
-const resumeId = "13mORJ50BSa8fZZTySLjoGB90fR-qTMun"
-const resumeUrl = `https://drive.google.com/file/d/${resumeId}/view`
-
 const AboutSection = () => {
   const reduceMotion = useReducedMotion()
   const experienceYears = Math.max(
@@ -66,7 +62,7 @@ const AboutSection = () => {
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="relative z-10 py-20"
+      className="relative z-10 scroll-mt-20 pb-16 lg:scroll-mt-24 lg:pb-36"
     >
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
@@ -140,17 +136,6 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <a
-              href={resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-baseline gap-1 text-base font-semibold leading-tight text-slate-200 transition-colors duration-200 hover:text-[#64ffda] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64ffda] focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-            >
-              View Full Résumé
-              <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
-            </a>
-          </div>
         </div>
       </div>
     </motion.section>

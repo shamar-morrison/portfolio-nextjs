@@ -1,17 +1,8 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Code, ExternalLink } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
-import { Category } from "./projects-section"
+import type { Category } from "./projects-section"
 
 export interface ProjectProps {
   title: string
@@ -35,55 +26,61 @@ const ProjectCard = ({
   const isMobileApp = categories.includes("Mobile Apps")
 
   return (
-    <Card className="flex h-full flex-col overflow-hidden border-slate-700 bg-slate-800/50 text-slate-200 shadow-none transition-all duration-300 hover:border-[#64ffda]/60 hover:shadow-xl hover:shadow-slate-950/30">
-      <div className="relative h-48 overflow-hidden bg-slate-800">
-        <Image
-          priority
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
-      <CardHeader>
-        <CardTitle className="mb-2 text-xl font-bold text-slate-200">{title}</CardTitle>
-        <div className="mt-2 flex flex-wrap">
-          {technologies.map((tech, index) => (
-            <Badge
-              key={index}
-              variant="outline"
-              className="mr-1.5 mt-2 rounded-full border-0 bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-            >
-              {tech}
-            </Badge>
-          ))}
-        </div>
-      </CardHeader>
-      <CardContent className="flex-grow">
-        <CardDescription className="text-slate-400">
+    <article className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
+
+      <div className="z-10 sm:order-2 sm:col-span-6">
+        <h3 className="text-xl font-bold leading-tight text-slate-200">
+          {title}
+        </h3>
+        <p className="mt-2 text-sm leading-normal text-slate-400">
           {description}
-        </CardDescription>
-      </CardContent>
-      <CardFooter className="flex justify-between gap-2">
-        {repoUrl && <Button asChild variant="glass" className="flex-1">
-          <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
-            <Code className="h-4 w-4" />
-            Code
-          </Link>
-        </Button>}
-        <Button
-          asChild
-          variant="glass"
-          className="flex-1"
-        >
-          {liveUrl && <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="h-4 w-4" />
-            {isMobileApp ? "Store Page" : "Live Demo"}
-          </Link> }
-        </Button>
-      </CardFooter>
-    </Card>
+        </p>
+
+        <ul className="mt-2 flex flex-wrap" aria-label={`Technologies used by ${title}`}>
+          {technologies.map((technology) => (
+            <li key={technology} className="mr-1.5 mt-2">
+              <Badge
+                variant="outline"
+                className="rounded-full border-0 bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+              >
+                {technology}
+              </Badge>
+            </li>
+          ))}
+        </ul>
+
+        {(repoUrl || liveUrl) && (
+          <div className="mt-5 flex flex-wrap gap-2">
+            {repoUrl && (
+              <Button asChild variant="glass" size="sm">
+                <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+                  <Code />
+                  Code
+                </a>
+              </Button>
+            )}
+            {liveUrl && (
+              <Button asChild variant="glass" size="sm">
+                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink />
+                  {isMobileApp ? "Store Page" : "Live Demo"}
+                </a>
+              </Button>
+            )}
+          </div>
+        )}
+      </div>
+
+      <Image
+        src={imageUrl}
+        alt={title}
+        width={640}
+        height={360}
+        sizes="(min-width: 640px) 20vw, 100vw"
+        className="z-10 aspect-video w-full rounded border-2 border-slate-200/10 object-cover transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+      />
+    </article>
   )
 }
 
