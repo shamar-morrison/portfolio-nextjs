@@ -1,25 +1,16 @@
-"use client"
-
-import { motion, useReducedMotion } from "framer-motion"
-
 const experienceStartYear = 2021
 const AboutSection = () => {
-  const reduceMotion = useReducedMotion()
   const experienceYears = Math.max(
     0,
     new Date().getFullYear() - experienceStartYear,
   )
 
   return (
-    <motion.section
+    <section
       id="about"
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.45, ease: "easeOut" }}
-      className="relative z-10 scroll-mt-20 pb-16 lg:scroll-mt-24 lg:pb-36"
+      className="relative z-10 scroll-mt-20 pb-16 pt-10 lg:scroll-mt-24 lg:pb-36 lg:pt-0"
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto">
         <div className="mx-auto max-w-3xl">
           <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-slate-200 lg:hidden">
             About
@@ -73,7 +64,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   )
 }
 

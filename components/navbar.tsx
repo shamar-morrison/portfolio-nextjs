@@ -1,20 +1,14 @@
 "use client"
 
-import { resumeUrl, socialLinks } from "@/lib/site"
+import { resumeUrl } from "@/lib/site"
 import { ArrowUpRight } from "lucide-react"
-import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6"
 import { useEffect, useState } from "react"
+import SocialLinks from "./social-links"
 
 const sectionLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
 ] as const
-
-const socialIcons = {
-  X: FaXTwitter,
-  LinkedIn: FaLinkedinIn,
-  GitHub: FaGithub,
-}
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("#about")
@@ -106,26 +100,7 @@ Web &amp; Mobile Engineer
           </nav>
         </div>
 
-        <ul className="ml-1 mt-auto flex items-center" aria-label="Social media">
-          {socialLinks.map(({ label, href }) => {
-            const Icon = socialIcons[label]
-
-            return (
-              <li key={label} className="mr-5 shrink-0 text-xs last:mr-0">
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${label} (opens in a new tab)`}
-                  title={label}
-                  className="block text-slate-400 transition-colors duration-150 hover:text-[#64ffda] focus-visible:outline-none focus-visible:text-[#64ffda]"
-                >
-                  <Icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              </li>
-            )
-          })}
-        </ul>
+        <SocialLinks className="ml-1 mt-auto flex items-center" />
       </header>
 
       <header className="fixed inset-x-0 top-0 z-40 border-b border-slate-700/80 bg-slate-900/90 px-4 backdrop-blur-md lg:hidden">

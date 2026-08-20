@@ -1,6 +1,7 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
+import SocialLinks from "./social-links"
 
 const HeroSection = () => {
   const reduceMotion = useReducedMotion()
@@ -22,6 +23,7 @@ const HeroSection = () => {
         I build modern, responsive, and user-friendly applications using
         various technologies.
       </p>
+      <SocialLinks className="ml-1 mt-8 flex items-center" />
     </motion.section>
   )
 }

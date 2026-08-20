@@ -3,8 +3,8 @@
 import { projects } from "@/lib/projects"
 import ProjectCard from "./project-card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { Button } from "@/components/ui/button"
 import { motion, useReducedMotion } from "framer-motion"
+import { ArrowUpRight } from "lucide-react"
 
 const categories = ["Full Stack", "Backend APIs", "Mobile Apps"] as const
 export type Category = (typeof categories)[number]
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
       transition={{ duration: 0.45, ease: "easeOut" }}
       className="relative z-10 scroll-mt-20 lg:scroll-mt-24"
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto">
         <div className="max-w-6xl mx-auto">
           <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-slate-200 lg:hidden">
             Projects
@@ -75,16 +75,16 @@ const ProjectsSection = () => {
             })}
           </Tabs>
 
-          <div className="text-center mt-12">
-            <Button asChild variant="glass" className="px-6">
-              <a
-                href="https://github.com/shamar-morrison?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View More on GitHub
-              </a>
-            </Button>
+          <div className="mt-12 text-center">
+            <a
+              href="https://github.com/shamar-morrison?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-baseline font-semibold leading-tight text-slate-200 transition-colors hover:text-teal-300 focus-visible:text-teal-300 focus-visible:outline-none"
+            >
+              View More on GitHub
+              <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-[3px] transition-transform group-hover:translate-x-[0.9px] group-hover:-translate-y-[0.9px] group-focus-visible:-translate-y-[0.9px] group-focus-visible:-translate-x-[0.9px] motion-reduce:transition-none" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>
