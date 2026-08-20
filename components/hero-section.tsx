@@ -1,9 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { motion, useReducedMotion } from "framer-motion"
-import Link from "next/link"
-import { Code } from "lucide-react"
 
 const HeroSection = () => {
   const reduceMotion = useReducedMotion()
@@ -25,12 +22,6 @@ const HeroSection = () => {
         I build modern, responsive, and user-friendly applications using
         various technologies.
       </p>
-      <Button asChild size="lg" variant="glass" className="mt-8">
-        <Link href="#projects">
-          <Code className="h-5 w-5" />
-          View My Projects
-        </Link>
-      </Button>
     </motion.section>
   )
 }

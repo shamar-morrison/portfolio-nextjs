@@ -1,6 +1,7 @@
 "use client"
 
 import { resumeUrl, socialLinks } from "@/lib/site"
+import { ArrowUpRight } from "lucide-react"
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6"
 import { useEffect, useState } from "react"
 
@@ -50,14 +51,14 @@ const Navbar = () => {
       >
         <span
           aria-hidden="true"
-          className={`mr-4 h-px bg-slate-600 transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-[#64ffda] group-focus-visible:w-16 group-focus-visible:bg-[#64ffda] ${
-            isActive ? "w-16 bg-[#64ffda]" : "w-8"
+          className={`mr-4 h-px bg-slate-600 transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${
+            isActive ? "w-16 bg-slate-200" : "w-8"
           }`}
         />
         <span
           className={`text-xs font-bold uppercase tracking-widest transition-colors duration-150 ${
             isActive
-              ? "text-[#64ffda]"
+              ? "text-slate-200"
               : "text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
           }`}
         >
@@ -69,7 +70,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="hidden lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:self-start lg:flex-col lg:justify-between lg:py-24">
+      <header className="hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[48%] lg:self-start lg:flex-col lg:py-24">
         <div>
           <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
             <a href="/">Shamar Morrison</a>
@@ -93,10 +94,11 @@ Web &amp; Mobile Engineer
                 >
                   <span
                     aria-hidden="true"
-                    className="mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-[#64ffda] group-focus-visible:w-16 group-focus-visible:bg-[#64ffda] motion-reduce:transition-none"
+                    className="mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
                   />
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500 transition-colors duration-150 group-hover:text-slate-200 group-focus-visible:text-slate-200">
-                    Resume
+                  <span className="inline-flex items-baseline text-xs font-bold uppercase tracking-widest text-slate-500 transition-colors duration-150 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                    Résumé
+                    <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-[4px] transition-transform motion-reduce:transition-none" aria-hidden="true" />
                   </span>
                 </a>
               </li>
@@ -104,7 +106,7 @@ Web &amp; Mobile Engineer
           </nav>
         </div>
 
-        <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
+        <ul className="ml-1 mt-auto flex items-center" aria-label="Social media">
           {socialLinks.map(({ label, href }) => {
             const Icon = socialIcons[label]
 
@@ -145,7 +147,7 @@ Web &amp; Mobile Engineer
                       href={href}
                       aria-current={isActive ? "page" : undefined}
                       className={`inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider transition-colors duration-150 focus-visible:outline-none sm:text-xs ${
-                        isActive ? "text-[#64ffda]" : "text-slate-300 hover:text-[#64ffda]"
+                        isActive ? "text-slate-200" : "text-slate-300 hover:text-slate-200"
                       }`}
                     >
                       {label}
@@ -158,9 +160,10 @@ Web &amp; Mobile Engineer
                   href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider text-slate-300 transition-colors duration-150 hover:text-[#64ffda] focus-visible:outline-none focus-visible:text-[#64ffda] sm:text-xs"
+                  className="group inline-flex h-12 items-center text-[11px] font-bold uppercase tracking-wider text-slate-300 transition-colors duration-150 hover:text-slate-200 focus-visible:outline-none focus-visible:text-slate-200 sm:text-xs"
                 >
-                  Resume
+                  Résumé
+                  <ArrowUpRight className="ml-1 h-3 w-3 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-focus-visible:-translate-y-0.5 group-focus-visible:translate-x-0.5 motion-reduce:transition-none" aria-hidden="true" />
                 </a>
               </li>
             </ul>

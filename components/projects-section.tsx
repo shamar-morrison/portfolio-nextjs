@@ -19,10 +19,13 @@ const ProjectsSection = () => {
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.12 }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="relative z-10 scroll-mt-20 pb-16 lg:scroll-mt-24 lg:pb-24"
+      className="relative z-10 scroll-mt-20 lg:scroll-mt-24"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+          <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-slate-200 lg:hidden">
+            Projects
+          </h2>
           <Tabs defaultValue={categories[0]} className="mb-12">
             <div className="mb-8 flex justify-center">
               <TabsList className="h-auto max-w-full flex-nowrap overflow-x-auto rounded-full border border-slate-700 bg-slate-800/60 p-0.5 text-slate-400">
