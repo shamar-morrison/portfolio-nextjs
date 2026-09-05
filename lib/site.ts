@@ -13,4 +13,8 @@ export const socialLinks = [
     label: "GitHub",
     href: "https://github.com/shamar-morrison",
   },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/18768645682?text=Hi%20Shamar%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect",
+  },
 ] as const
