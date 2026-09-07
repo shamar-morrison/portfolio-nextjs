@@ -23,7 +23,7 @@ export const projects: ProjectProps[] = [
       "Companion web app to ShowSeek, a movie and TV tracker I designed and built independently for React Native. The mobile app is live on Google Play, reached the top 3 in its category organically in Brazil, and supports localization across Portuguese, Italian, and Turkish.",
     technologies: ["Next.js", "TypeScript", "Firebase", "Rest API"],
     repoUrl: "https://github.com/shamar-morrison/show-seek-web",
-    liveUrl: "https://show-seek-web.shamar-webdev.workers.dev",
+    liveUrl: "https://show-seek.app/",
     imageUrl: "/showseek.png",
     categories: ["Full Stack"],
   },
