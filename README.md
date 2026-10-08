@@ -17,7 +17,7 @@ This portfolio website showcases my skills, projects, and provides a way for pot
 - **Frontend**: Next.js 14 (App Router), React, TypeScript, Tailwind CSS, Shadcn UI
 - **Email**: Resend API for contact form emails
 - **Styling**: Tailwind CSS, CSS Modules
-- **Deployment**: Netlify
+- **Deployment**: Cloudflare (Git-connected auto-deploy — pushes to `main` build and publish automatically)
 
 ## Setup Instructions
 
