@@ -1,11 +1,18 @@
 import { socialLinks } from "@/lib/site"
-import { FaGithub, FaLinkedinIn, FaWhatsapp, FaXTwitter } from "react-icons/fa6"
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaMedium,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6"
 
 const socialIcons = {
   X: FaXTwitter,
   LinkedIn: FaLinkedinIn,
   GitHub: FaGithub,
   WhatsApp: FaWhatsapp,
+  Medium: FaMedium,
 }
 
 interface SocialLinksProps {

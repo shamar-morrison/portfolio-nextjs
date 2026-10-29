@@ -108,6 +108,7 @@ export default function RootLayout({
                 "https://github.com/shamar-morrison",
                 "https://www.linkedin.com/in/shamar-morrison-7b641b364/",
                 "https://twitter.com/theavgcoder",
+                "https://medium.com/@shamar.morrison2000",
               ],
               knowsAbout: [
                 "Web Development",
