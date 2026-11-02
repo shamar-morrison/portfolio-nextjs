@@ -1,10 +1,4 @@
-const experienceStartYear = 2021
 const AboutSection = () => {
-  const experienceYears = Math.max(
-    0,
-    new Date().getFullYear() - experienceStartYear,
-  )
-
   return (
     <section
       id="about"
@@ -17,9 +11,9 @@ const AboutSection = () => {
           </h2>
           <div className="space-y-6 text-slate-400">
             <p>
-              Hey there! I'm Shamar, and I like building things. I'm a full-stack web and mobile engineer with {experienceYears}+ years
-              of experience building products that ship and scale. Most recently,
-              I led engineering at{" "}
+              Hey, I'm Shamar. I enjoy taking an idea from the first rough sketch
+              to something people can actually use. I work across web and mobile,
+              and most recently led engineering at{" "}
               <a
                 href="https://edufocalacademy.com/"
                 target="_blank"
@@ -28,16 +22,14 @@ const AboutSection = () => {
               >
                 Edufocal
               </a>
-              , where I drove a Next.js 14
-              modernization that cut load times by 60% and improved reliability by
-              85%, while managing a team of 5 engineers and 2 designers and
-              maintaining 99.9% uptime. Before that, I built a React Native app at
-              Herald Ltd. that reached 100,000+ downloads and a 4.5-star rating.
+              , helping modernize the platform and working with a small team to
+              keep it running smoothly. Before that, I helped build a React Native
+              app at Herald Ltd. that found a big audience.
             </p>
 
             <p>
               Alongside client and full-time work, I design and build my own
-              products end to end, including{" "}
+              products, including{" "}
               <a
                 href="https://play.google.com/store/apps/details?id=app.horizon.showseek"
                 target="_blank"
@@ -46,20 +38,20 @@ const AboutSection = () => {
               >
                 ShowSeek
               </a>
-              , which has reached the top 3
-              in its category organically in Brazil. I also run a
-              development agency, taking projects from architecture through
-              delivery.
+              , an app that found an audience in Brazil and reached the top of its
+              category. I also run a development agency, where I help clients take
+              ideas from planning through launch.
             </p>
 
             <p>
-              My core stack is React, Next.js, React Native, TypeScript, and
-              Node.js, with production experience integrating LLMs (Claude,
-              Gemini, GPT, Vapi) into real systems.
+              I usually work with React, Next.js, React Native, TypeScript, and
+              Node.js. Lately, I've also been finding useful ways to bring AI tools
+              like Claude, Gemini, GPT, and Vapi into products.
             </p>
 
             <p>
-              In my spare time, you can usually find me reading Fantasy/Sci-Fi, playing video games or doing strength training/combat sports.
+              Away from work, I'm usually reading fantasy or sci-fi, playing video
+              games, or doing strength training and combat sports.
             </p>
           </div>
         </div>
